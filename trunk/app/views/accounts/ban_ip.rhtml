@@ -1,0 +1,15 @@
+<% form_tag do %>
+<table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+<thead>
+<tr><td colspan='2'><h2>Ban an IP </h2></td></tr>
+</thead>
+<tbody>
+<tr><td><b>Notes</b></td><td>Before using this you should know a few things. The "." punctuation marks seperate the octets of IP addresses. "*" punctuation marks are wildcards. This field will only take numbers (0-9), "*" and ".". 
+<tr><td><b>IP</b></td><td><%= text_field("banned_ip","ip") %><%= submit_tag("Ban this range") %></td></tr>
+<tr><td><b>Banned IPs</b></td><td><% for ip in @banned %>
+<%= ip.ip.gsub(92.chr + "d+","*") %> <%= link_to("Remove", :action => "remove_banned_ip", :id => ip.id) %><br>
+<% end %>
+</td></tr>
+</tbody>
+</table>
+<% end %>

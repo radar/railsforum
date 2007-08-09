@@ -1,0 +1,13 @@
+<tbody>
+<tr><td width='100px'>
+<b>Subject:</b></td><td> <%= text_field("topic","subject") %></td></tr>
+<%= hidden_field("topic","forum_id", :value => @forum.id) %>
+<% if logged_in? %>
+<%= hidden_field("topic","user_id", :value => current_user.id ) %>
+<%= hidden_field("post","user_id", :value => current_user.id ) %>
+<% else %>
+<%= hidden_field("topic","user_id", :value => -1) %>
+<%= hidden_field("post","user_id", :value => -1) %>
+<% end %>
+<tr><td valign='top'><b>Post:</b> </td><td><%= text_area("post","text", :cols => "80") %></td></tr>
+</tbody>

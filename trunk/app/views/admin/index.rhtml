@@ -1,0 +1,20 @@
+<table cellspacing='0' cellpadding='0' width='100%' class='admin-section'>
+<tr><td class='admin-section-title' align='center' colspan='2'>
+Administration Section</td></tr>
+<tr><td class='admin-section-sub-title' width='50%'>Recent Posts</td><td class='admin-section-sub-title'>New Users</td></tr>
+<tr><td class='admin-section-sub-box' valign='top'>
+<% for post in @posts %>
+<%= post.user.login %> posted in <%= link_to(post.topic.subject, topic_path(post.topic.forum.id,post.topic.id)) + ", " + distance_of_time_in_words(post.created_at,Time.now) %> ago, <i>"<%= truncate(post.text,50) %>"</i><br>
+<% end %>
+</td><td valign='top' class='admin-section-sub-box'><% for user in @users %>
+<%= user.login + ", " + distance_of_time_in_words(user.created_at,Time.now) %> ago<br>
+<% end %></td></tr>
+<tr><td class='admin-section-sub-title'>Forums</td><td class='admin-section-sub-title'>Users</td></tr>
+<tr><td class='admin-section-sub-box'>
+<%= link_to("New Forum", :controller => "forum", :action => "create") %><br>
+<%= link_to("Edit Forum", :controller => "forum", :action => "edit") %>
+<br><%= link_to("Delete Forum", :controller => "forum", :action => "delete") %></td>
+<td class='admin-section-sub-box' valign='top'><%= link_to("List of Users", :controller => "accounts", :action => "list") %><br>
+<%= link_to("Ban IPs", :controller => "accounts", :action => "ban_ip") %>
+</td></tr>
+</table>

@@ -1,0 +1,47 @@
+<table cellspacing='0' cellpadding='2' class='forums' width='100%' rules='groups'> 
+<thead>
+<tr>
+<td align='left' width='40%'><b>Forum</b></td>
+<td align='center' width='100px'><b>Topics</b></td>
+<td align='center' width='100px'><b>Posts</b></td>
+<td align='right'><b>Last Post</b></td>
+</tr>
+</thead>
+<% for forum in @forums %>
+<tbody>
+
+<tr><td align='left'><h1><%= link_to(forum.title, forum_path(forum.id)) %></h1><%= forum.description %></td>
+<td align='center'><%= forum.topics.size %></td>
+<td align='center'><%= forum.posts.size %></td>
+<td align='right'><% if !forum.topics.empty? %>
+<%= time_ago_in_words(forum.topics.last.posts.last.created_at) %> ago
+by <%= link_to(forum.topics.last.posts.last.user.login, :controller => "account", :action => "user", :id => forum.topics.last.posts.last.user.login)  %>
+in <%= link_to(forum.topics.last.subject, :controller => "topic", :action => "view", :id => forum.topics.last.id) %>
+
+<% else %>
+None
+<% end %>
+</td>
+</tbody>
+
+
+<% end %>
+
+<tfoot>
+</tfoot>
+</table><br>
+<% if !session["user"].nil? %>
+<table cellspacing='0' cellpadding='5' class='info-box' width='100%'>
+<thead>
+<tr><td>Forum Statistics</td></tr>
+</thead>
+<tbody>
+<tr><td>
+<b>Users:</b> <%= @users %><br>
+<b>Users on in the last 15 minutes:</b> <%= @lusers %>
+<br>
+Key: <b><font color='red'>[Administrator]</font></b> <b><font color='orange'>[Moderator]</font></b> <b><font color='blue'>[Banned User]</font></b> [User]
+</td></tr>
+</tbody>
+</table>
+<% end %>

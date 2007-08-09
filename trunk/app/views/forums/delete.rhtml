@@ -1,0 +1,14 @@
+<table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+<thead><tr><td><h2>Select a Forum to Delete</h2></td></tr></thead>
+<tbody>
+<% for forum in @forums %>
+<tr><td>
+<%= link_to("Delete", { :action => "delete", :id => forum.id },
+ :confirm => "Are you sure you want to delete this forum?") %>
+ <b><%= forum.name %><br>
+ </td></tr>
+<% end %>
+
+</tbody>
+</table>
+
