@@ -1,0 +1,30 @@
+<table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+<thead><tr><td colspan='6'><h2>List of Users</h2></td></tr>
+<tr><td></td>
+<td align='center'>Login</td>
+<td align='center'>Member Since</td>
+<td align='center'>Posts</td>
+<td align='center'>Last Login</td>
+<td align='center'>Last Action</td>
+</tr></thead>
+<tbody>
+<% for user in @users %>
+<tr>
+<% if @current_user.administrator? %>
+<td width='80px'><%= link_to(image_tag("delete.jpg"), { :action => "delete", :id => user.id }, :confirm => "Are you sure you want to delete #{user.login}?") %>
+<%= link_to(image_tag("edit.jpg"), :controller => "account", :action => "edit", :id => user.id) %>
+<%= link_to(image_tag("ban.jpg"), { :controller => "account", :action => "ban", :id => user.id }, :confirm => "Are you sure you want to ban this user?" ) %></td>
+<% else %>
+<td width='80px'>&nbsp;</td>
+<% end %>
+<td align='center'><%= link_to(user.login, :controller => "user", :action => user.login) %></td>
+<td align='center'><%= user.created_at.strftime("%d-%m-%y") %></td>
+<td align='center'><%= user.posts.size %></td>
+<td align='center'><% if user.logged_in? %><%= time_ago_in_words(user.logged_in) %> ago<% else %>None<% end %></td>
+<td align='center'><% if !user.action.blank? %><%= user.action %>, <%= time_ago_in_words(user.last_action) %> ago<% else %>None<% end %></td>
+</tr>
+<% end %>
+</tbody>
+<tfoot>
+</tfoot>
+</table>

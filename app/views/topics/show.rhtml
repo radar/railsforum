@@ -1,0 +1,55 @@
+
+rForum -> <%= link_to(@topic.forum.title, forum_path(@topic.forum.id)) %> ->  <%= @topic.subject %>
+<h2><%= @topic.subject %></h2>
+<%= link_to("New Topic", new_topic_path) %> |
+<% if !@topic.locked || @current_user.administrator? || @current_user.moderator?%>
+<%= link_to("New Reply", reply_topic_path(@topic.id)) %>
+<% else if !@current_user.administrator? || @current_user.moderator?%>Locked!
+<% else %>
+Locked!
+<% end 
+end %>
+<br>
+<table cellspacing='0' cellpadding='5' width='100%' class='posts'>
+<% for post in @topic.posts %>
+<thead>
+<tr><td rowspan='2' valign='top' width='15%'><b><%= post.user.login %></b></td>
+<td><%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %>
+<% if post.edits.size > 1 %>
+<%= link_to("Versions", :controller => "post", :action => "revision", :id => post.id) %>
+<% end %>
+</td>
+<td align='right'>
+<% if logged_in? %>
+<%= link_to("Reply", reply_topic_path(@topic.id)) %> |
+<%= link_to("Quote", :controller => "topics", :action => "reply", :id => @topic.id, :quote => post.id) %> 
+<% if is_post_owner_or_admin?(post.id) %>
+ | <%= link_to("Edit", edit_post_path(post.id)) %> |
+<%= link_to("Delete", post_path(post.id), :method => "delete", :confirm => "Are you sure you want to delete this post?") %>
+<% end %>
+<% end %>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr><td valign='top'>
+<% if !post.user.email.blank? %>
+<%= image_tag("http://www.gravatar.com/avatar.php?gravatar_id=" + Digest::MD5.hexdigest(post.user.email) + "&default=") %><br>
+<% end %>
+<b>Posts:</b> <%= post.user.posts.size %><br>
+<b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
+			<%= sanitize(post.text).gsub("\n","<br />") %><% if !post.user.signature.blank? %><br>
+			____________
+			<% post.user.signature = BBC.markup(post.user.signature) while post.user.signature != BBC.markup(post.user.signature) %>
+			<%= simple_format(sanitize(post.user.signature)) %>
+			<% end
+			if post.updated_at.nil? %>
+			<br>
+			<i>This post has been edited by <%= post.edits.last.user.login + ", " + distance_of_time_in_words(post.updated_at,Time.now) %> ago</i>
+			<% end %></td>
+</tr>
+</tbody>
+<tfoot>
+</tfoot>
+<% end %>
+</table>

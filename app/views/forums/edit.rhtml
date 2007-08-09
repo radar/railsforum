@@ -1,0 +1,27 @@
+<% if !params[:id] %>
+<table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+<thead><tr><td><h2>Select a Forum to Edit</h2></td></tr></thead>
+<tbody>
+<% for forum in @forums %>
+<tr><td>
+<%= link_to("Edit", { :action => "edit", :id => forum.id }) %>
+ <b><%= forum.name %><br>
+ </td></tr>
+<% end %>
+
+</tbody>
+</table>
+<% else %>
+<%= form_tag %>
+<table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+<thead><tr><td colspan='2'><h2>Editing <%= @forum.name %></h2></td></tr></thead>
+<tbody>
+<tr><td>Title:</td><td><%= text_field("forum","name") %></td></tr>
+<tr><td>Description:</td><td><%= text_area("forum","description", :cols => 80, :rows => 5) %></td></tr>
+</tbody>
+<tfoot>
+<tr><td colspan='2'><%= submit_tag("Update") %></td></tr>
+</tfoot>
+</table>
+<%= end_form_tag %>
+<% end %>
