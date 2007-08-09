@@ -51,6 +51,9 @@ class AccountsController < ApplicationController
   end
   
   def ban_ip
+  if request.post?
+  #do stuff
+  end
   @banned = BannedIp.find(:all)
   end
   
