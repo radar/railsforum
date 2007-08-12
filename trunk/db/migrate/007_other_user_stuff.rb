@@ -9,6 +9,7 @@ class OtherUserStuff < ActiveRecord::Migration
 	  t.column 'ip', :string
 	  t.column 'reason', :string
 	  t.column 'banned_by', :integer
+	  t.column 'ban_time', :datetime
 	  end
   end
 
