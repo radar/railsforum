@@ -27,7 +27,7 @@ Logged in as <%= current_user.login %> |
 <% end %>
 </div>
 <div class='time-now'>
-The time is now <%=Time.now.strftime("%d-%m-%Y %H:%M:%S") %></div><br><br>
+The time is now <%= Time.now.ordinalize %> </div><br><br>
 <% if ip_banned? %>
 <div class='ban-box' align='center'><br><br><h1>YOUR IP IS BANNED</h1><br><br></div>
 <% elsif user_banned? %>

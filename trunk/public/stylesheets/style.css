@@ -70,7 +70,7 @@ border:1px solid #84afd3;
 font-weight:bold;
 background:url('/images/thead-bg.jpg') repeat-x #e1f1ff;
 }
-.posts tbody, .action-box tbody {
+ .posts tbody, .action-box tbody {
 background:#e1f1ff;
 }
 .posts h1 {

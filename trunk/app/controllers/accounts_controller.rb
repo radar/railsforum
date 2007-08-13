@@ -9,9 +9,9 @@ class AccountsController < ApplicationController
     return unless request.post?
     self.current_user = User.authenticate(params[:login], params[:password])
       if logged_in?
-	current_user.update_attribute(previous_login,current_user.login_time)
-    current_user.update_attribute(login_time,Time.now)
-      if params[:remember_me] == "1"
+	current_user.update_attribute("previous_login",current_user.login_time)
+    current_user.update_attribute("login_time",Time.now)
+      if params[:remember_me] == 1
         self.current_user.remember_me
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
@@ -46,9 +46,9 @@ class AccountsController < ApplicationController
     @user = current_user
   if request.post?
 	  params[:user][:crypted_password] = @user.encrypt(params[:user][:password])  if params[:user][:password] == params[:user][:password_confirmation] && !params[:user][:password].blank? 
-	  flash[:notice] = "Password has been changed. Please remember to use this password from now on. " unless params[:user][:crypted_password].nil?
+	  flash[:notice] = "Password has been changed. Please remember to use this password from now on. Your profile has been updated." unless params[:user][:crypted_password].nil?
   @user.update_attributes(params[:user])
-  flash[:notice] += "Profile has been updated."
+  flash[:notice] ||= "Your profile has been updated."
   end
   end
   #maybe move these methods into their own controller, they have nothing to do with users.

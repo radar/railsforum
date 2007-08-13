@@ -38,12 +38,11 @@ end %>
 <% end %>
 <b>Posts:</b> <%= post.user.posts.size %><br>
 <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
-			<%= sanitize(post.text).gsub("\n","<br />") %><% if !post.user.signature.blank? %><br>
-			____________
-			<% post.user.signature = BBC.markup(post.user.signature) while post.user.signature != BBC.markup(post.user.signature) %>
-			<%= simple_format(sanitize(post.user.signature)) %>
-			<% end
-			if post.updated_at.nil? %>
+			<%= sanitize(post.text).gsub("\n","<br />") %><% unless post.user.signature.blank? %><br>
+			____________<br>
+			<%= sanitize(post.user.signature).gsub("\n","<br />") %>
+			<% end %>
+			<% if post.updated_at.nil? %>
 			<br>
 			<i>This post has been edited by <%= post.edits.last.user.login + ", " + distance_of_time_in_words(post.updated_at,Time.now) %> ago</i>
 			<% end %></td>

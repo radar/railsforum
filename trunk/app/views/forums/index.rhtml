@@ -1,4 +1,5 @@
-<table cellspacing='0' cellpadding='2' class='forums' width='100%' rules='groups'> 
+<table cellspacing='0' cellpadding='2' class='forums' width='100%' rules='groups'>
+<% unless @forums.empty? %>
 <thead>
 <tr>
 <td align='left' width='40%'><b>Forum</b></td>
@@ -7,9 +8,9 @@
 <td align='right'><b>Last Post</b></td>
 </tr>
 </thead>
+
 <% for forum in @forums %>
 <tbody>
-
 <tr><td align='left'><h1><%= link_to(forum.title, forum_path(forum.id)) %></h1><%= forum.description %></td>
 <td align='center'><%= forum.topics.size %></td>
 <td align='center'><%= forum.posts.size %></td>
@@ -25,6 +26,11 @@ None
 </tbody>
 
 
+<% end %>
+<% else %>
+<thead>
+<tr><td colspan='5' align='center'><b>There are no forums. <% unless is_admin? %>Maybe an administrator should create one.<% else %><%= link_to "Create a forum.", new_forum_path %><% end %></b></td>
+</thead>
 <% end %>
 
 <tfoot>

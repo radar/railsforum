@@ -17,5 +17,19 @@ before_filter :login_required, :except => [:view]
 	def reply
 	@topic = Topic.find(params[:id])
 	@post = Post.find(params[:quote]) if params[:quote]
+end
+	def moderate
+	case params[:commit]
+		when "Lock"
+	        params[:moderated_topics].each { |id| Topic.find(id).update_attribute("locked",true) }
+		flash[:notice] = "All selected topics have been locked."
+		when "Unlock"
+		params[:moderated_topics].each { |id| Topic.find(id).update_attribute("locked",false) }
+		flash[:notice] = "All selected topics have been unlocked."
+		when "Delete"
+		params[:moderated_topics].each { |id| Topic.find(id).destroy }
+		flash[:notice] = "All selected topics have been deleted."
+	end
+	redirect_to forum_path(params[:forum_id])
 	end
 end

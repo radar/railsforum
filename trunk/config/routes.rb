@@ -14,8 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '', :controller => "forums"
   map.connect 'accounts/user/:login', :controller => 'accounts', :action => 'user'
   map.connect 'topics/reply/:id/:quote', :controller => 'topics', :action => 'reply'
- map.resources :forums do |forums|
- forums.resources :topics, :member => { :reply => :get } do |topics|
+ map.resources :forums, :collection => { :list => :get } do |forums|
+ forums.resources :topics, :collection => { :moderate => :post }, :member => { :reply => :get } do |topics|
   topics.resources :posts
 end
 end
