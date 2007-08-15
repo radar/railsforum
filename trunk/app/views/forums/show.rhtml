@@ -17,7 +17,7 @@
 	<tbody>
 	<% for topic in @forum.topics.reverse %>
 	<tr>
-	<td><%= check_box_tag "moderated_topics[]", topic.id %></td>
+	<td><% if is_admin? %><%= check_box_tag "moderated_topics[]", topic.id %><% end %></td>
 <td>
 <% if logged_in? && !current_user.previous_login.nil? && topic.posts.last.created_at > current_user.previous_login && !topic.locked %>
 <%= image_tag("new.jpg") %>
@@ -33,13 +33,13 @@
 <td align='center'><%= link_to(topic.user.login, :controller => "accounts", :action => "user", :id => topic.user.login) %></td>
 <td align='right' width='15%'><%= time_ago_in_words(topic.posts.last.created_at) %> ago by <%= link_to topic.posts.last.user.login, :controller => "accounts", :action => "user", :id => topic.posts.last.user.login %></td>
 </tr>
+<% end %>
 <% if is_admin? %>
 <tfoot>
 <tr><td align='right' colspan='8'>
 <%= submit_tag("Lock") + submit_tag("Unlock") + submit_tag("Delete") %>
 </td></tr>
 </tfoot>
-<% end %>
 <% end %>
 <% end %>
 <% else %>
