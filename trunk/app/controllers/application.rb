@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   session :session_key => '_forum_session_id'
   include AuthenticatedSystem
   require 'chronic'
+  require 'custom_methods'
   before_filter :login_from_cookie
   before_filter :ip_banned?
 end
