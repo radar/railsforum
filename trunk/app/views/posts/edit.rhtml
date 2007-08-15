@@ -1,8 +1,8 @@
-<% form_for :team, @post, :url => post_path(@post), :html => { :method => :put } do |f| %>
+<% form_for :post, @post, :url => post_path(@post), :html => { :method => :put } do |f| %>
 <table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
 <thead><tr><td colspan='2'><h2>Editing a post in: <%= link_to(@post.topic.subject, :controller => "topic", :action => "view", :id=> @post.topic.id) %></h2></td></tr></thead>
 <%= render :partial => "form", :locals => { :f => f } %>
 <tfoot><tr><td colspan='2'>
-<%= submit_tag "Create" %></td></tr>
+<%= submit_tag "Update" %></td></tr>
 </table>
 <% end %>

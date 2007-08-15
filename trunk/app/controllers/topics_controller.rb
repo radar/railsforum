@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-before_filter :login_required, :except => [:view]
+before_filter :login_required, :except => [:show]
 	def new
 	@forum = Forum.find(params[:forum_id])
 	end

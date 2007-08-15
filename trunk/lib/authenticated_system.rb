@@ -20,14 +20,21 @@ module AuthenticatedSystem
   end
   
   def is_post_owner_or_admin?(post_id)
-    if Post.find(post_id).user == current_user || current_user.admin?
+    if logged_in? && (Post.find(post_id).user == current_user || current_user.admin?)
       true
     else
       false
     end
   end
   def ip_banned?
+	  @ips = BannedIp.find(:all).select do |ip|
+	  Regexp.new(ip.ip).match(request.remote_addr).nil?
   end
+  unless @ips.empty?
+  flash[:ip] = @ips.first
+  redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:controller] == "accounts" && params[:action] == "ip_is_banned"
+  end
+  	  end
   def user_banned?
   logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end
@@ -95,6 +102,7 @@ module AuthenticatedSystem
     respond_to do |accepts|
       accepts.html do
         store_location
+	flash[:notice] = "You need to be logged in to do that."
         redirect_to :controller => 'accounts', :action => 'login'
       end
       accepts.xml do

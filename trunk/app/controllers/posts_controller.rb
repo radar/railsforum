@@ -8,7 +8,7 @@ def update
 @post = Post.find(params[:id])
 @post.update_attributes!(params[:post])
 flash[:notice] = "Post has been updated."
-redirect_to topic_path(@post.topic)
+redirect_to topic_path(@post.topic,@post.forum)
 end
 def create
 	begin

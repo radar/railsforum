@@ -12,8 +12,7 @@ class ForumsController < ApplicationController
 	
 	def create
 		begin
-		@forum = Forum.new(params[:forum])
-		@forum.save!
+		@forum = Forum.create!(params[:forum])
 		flash[:notice] = "Forum has been created."
 		redirect_to :controller => "admin", :action => "index"
 		rescue ActiveRecord::RecordInvalid

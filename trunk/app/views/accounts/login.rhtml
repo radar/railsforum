@@ -1,4 +1,6 @@
-<% form_tag do -%>
+<h2>Login</h2>
+<%= link_to "Don't have an account?", :controller => "accounts", :action => "signup" %>
+<% form_tag do %>
 <p><label for="login">Login</label><br/>
 <%= text_field_tag 'login' %></p>
 
@@ -9,4 +11,4 @@
 <%= check_box_tag 'remember_me' %></p>
 
 <p><%= submit_tag 'Log in' %></p>
-<% end -%>
+<% end %>

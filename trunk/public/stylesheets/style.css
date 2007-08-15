@@ -81,7 +81,12 @@ padding:0px;
 width:90%;
 background:#a4d5ff;
 border:1px solid #84afd3;
+text-align:left;
 padding:5px;
+}
+.term {
+	font-weight:bold;
+	font-family:monospace, "Courier New";
 }
 
 .admin-section {

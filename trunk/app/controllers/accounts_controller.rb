@@ -1,9 +1,6 @@
 class AccountsController < ApplicationController
   before_filter :store_location, :only => [:profile, :list]
   before_filter :is_admin?, :only => [:ban, :ban_ip]
-  def index
-	redirect_to forums_path
-  end
 
   def login
     return unless request.post?
@@ -28,7 +25,7 @@ class AccountsController < ApplicationController
     return unless request.post?
     @user.save!
     self.current_user = @user
-    redirect_back_or_default(:controller => '/account', :action => 'index')
+    redirect_back_or_default(forums_path)
     flash[:notice] = "Thanks for signing up!"
   rescue ActiveRecord::RecordInvalid
     render :action => 'signup'
@@ -39,7 +36,7 @@ class AccountsController < ApplicationController
     cookies.delete :auth_token
     reset_session
     flash[:notice] = "You have been logged out."
-    redirect_back_or_default(:controller => '/account', :action => 'index')
+    redirect_back_or_default(forums_path)
   end
   
   def profile
@@ -54,6 +51,7 @@ class AccountsController < ApplicationController
   #maybe move these methods into their own controller, they have nothing to do with users.
   def ban_ip
   if request.post?
+  params[:banned_ip][:ban_time] = Chronic.parse(params[:banned_ip][:ban_time])
   params[:banned_ip][:ip].gsub!(".","\.").gsub!("*","[0-9]{1,3}")
   BannedIp.create(params[:banned_ip])
   flash[:notice] = "The IP range has been banned."
@@ -79,9 +77,16 @@ class AccountsController < ApplicationController
   @user = User.find(:first)
   if request.post?
   params[:user][:banned_by] = current_user
+  params[:user][:ban_time] = Chronic.parse(params[:user][:ban_time])
   @user.update_attributes(params[:user])
   flash[:notice] = "User has been banned!"
   redirect_back_or_default(:action => "list")
   end
   end
+  
+  def ip_is_banned
+	  unless ip_banned?
+	  redirect_to forums_path
+	  end
+	  end
 end

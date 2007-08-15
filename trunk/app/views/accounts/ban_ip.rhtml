@@ -4,9 +4,12 @@
 <tr><td colspan='2'><h2>Ban an IP </h2></td></tr>
 </thead>
 <tbody>
-<tr><td><b>IP</b></td><td><%= text_field("banned_ip","ip") %></td></tr>
-<tr><td><b>Duration</b></td><td>LOOK INTO USING CHRONIC FOR THIS</td></tr>
-<tr><td><b>Reason</b></td><td><%= text_field "banned_ip", "reason" %></td></tr
+<tr><td><b>IP</b></td><td><%= text_field "banned_ip", "ip" %></td></tr>
+<tr><td><b>Duration</b></td><td><%= text_field "banned_ip", "ban_time" %>
+<%= observe_field("banned_ip_ban_time", :frequency => 1.0, :url => { :controller => "chronic", :action => "time" }, :with => "duration") %>
+<div id='date'></div>
+</td></tr>
+<tr><td><b>Reason</b></td><td><%= text_field "banned_ip", "reason" %></td></tr>
 <tr><td colspan='2'><%= submit_tag("Ban this range") %></td></tr>
 <tr><td colspan='2'><h2>Banned IPs</h2></td>
 <tr><td colspan='2'><% for ip in @banned %>
