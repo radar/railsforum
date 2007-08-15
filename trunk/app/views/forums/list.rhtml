@@ -1,0 +1,16 @@
+<table cellspacing='0' cellpadding='3' width='100%' class='action-box'>
+<thead><tr>
+<td>Edit</td>
+<td>Delete</td>
+<td>Title</td>
+</tr></thead>
+<tbody>
+<% for forum in @forums %>
+<tr>
+<td width='30'><%= link_to image_tag("edit.jpg"), edit_forum_path(forum.id) %></td>
+<td width='30'><%= link_to image_tag("delete.jpg"), forum_path(forum.id), :method => "delete", :confirm => "Are you sure you want to delete '#{forum.title}'" %></td>
+<td><%= forum.title %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
