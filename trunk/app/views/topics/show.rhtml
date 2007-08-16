@@ -36,7 +36,7 @@ end %>
 <% end %>
 <b>Posts:</b> <%= post.user.posts.size %><br>
 <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
-			<%= bbcode(sanitize(post.text)) %><% unless post.user.signature.blank? %><br>
+			<%= textilize(bbcode(sanitize(post.text))) %><% unless post.user.signature.blank? %><br>
 			____________<br>
 			<%= bbcode(sanitize(post.user.signature)) %>
 			<% end %>

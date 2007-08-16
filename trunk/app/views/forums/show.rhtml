@@ -43,7 +43,9 @@
 <% end %>
 <% end %>
 <% else %>
+<thead>
 <tr><td align='center'><b>There are no topics for this forum. Why not <%= link_to "Create one?", new_topic_path(@forum.id) %></b></td></tr>
+</thead>
 <% end %>
 </tbody>
 

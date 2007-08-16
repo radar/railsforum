@@ -4807,3 +4807,1411 @@ Rendering forums/index
   [4;35;1mUser Load (0.000228)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
   [4;36;1mUser Load (0.000120)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
 Completed in 0.06332 (15 reqs/sec) | Rendering: 0.01437 (22%) | DB: 0.01326 (20%) | 200 OK [http://localhost/forums]
+no such file to load -- chronic
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/controllers/application.rb:8
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/bin/mongrel_rails:16:in `load'
+C:/ruby/bin/mongrel_rails:16
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/helpers/application_helper.rb:15: syntax error, unexpected tSTRING_BEG, expecting '}'
+    text.gsub!(/\[b\](.*?)\[\/b\]/) { "<b>" << $1 "</b>" }
+                                                   ^
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:111:in `default_helper_module!'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `send'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `inherited_without_api'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/container/action_controller_container.rb:84:in `inherited_without_action_controller'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited'
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/controllers/application.rb:4
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/bin/mongrel_rails:16:in `load'
+C:/ruby/bin/mongrel_rails:16
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/helpers/application_helper.rb:15: syntax error, unexpected tSTRING_BEG, expecting '}'
+    text.gsub!(/\[b\](.*?)\[\/b\]/) { "<b>" << $1 "</b>" }
+                                                   ^
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:111:in `default_helper_module!'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `send'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `inherited_without_api'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/container/action_controller_container.rb:84:in `inherited_without_action_controller'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited'
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/controllers/application.rb:4
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/bin/mongrel_rails:16:in `load'
+C:/ruby/bin/mongrel_rails:16
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/helpers/application_helper.rb:15: syntax error, unexpected tSTRING_BEG, expecting '}'
+    text.gsub!(/\[b\](.*?)\[\/b\]/) { "<b>" << $1 "</b>" }
+                                                   ^
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:111:in `default_helper_module!'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `send'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `inherited_without_api'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/container/action_controller_container.rb:84:in `inherited_without_action_controller'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited'
+D:/Documents and Settings/Radar/My Documents/projects/forum/trunk/config/../app/controllers/application.rb:4
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/bin/mongrel_rails:16:in `load'
+C:/ruby/bin/mongrel_rails:16
+./script/../config/../app/helpers/application_helper.rb:15: syntax error, unexpected tSTRING_BEG, expecting '}'
+    text.gsub!(/\[b\](.*?)\[\/b\]/) { "<b>" << $1 "</b>" }
+                                                   ^
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:111:in `default_helper_module!'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `send'
+C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/helpers.rb:124:in `inherited_without_api'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/container/action_controller_container.rb:84:in `inherited_without_action_controller'
+C:/ruby/lib/ruby/gems/1.8/gems/actionwebservice-1.2.3/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited'
+./script/../config/../app/controllers/application.rb:4
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+script/server:5
+no such file to load -- chronic
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+./script/../config/../app/controllers/application.rb:8
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:60:in `depend_on'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:442:in `require_dependency'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:110:in `prepare_application'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:39:in `dispatch'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+script/server:5
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:20:12) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+
+
+Mysql::Error (#42000Unknown database 'rforum'):
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/vendor/mysql.rb:523:in `read'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/vendor/mysql.rb:153:in `real_connect'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:389:in `connect'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:152:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:82:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:82:in `mysql_connection'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:262:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:262:in `connection_without_query_cache='
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/query_cache.rb:54:in `connection='
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:230:in `retrieve_connection'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1139:in `add_limit!'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1101:in `construct_finder_sql'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:997:in `find_every'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:418:in `find'
+    /lib/authenticated_system.rb:30:in `ip_banned?'
+    /lib/authenticated_system.rb:38:in `ip_banned_redirect'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:456:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:456:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:435:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:20:42) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mMysql::Error: #42S02Table 'rforum.banned_ips' doesn't exist: SELECT * FROM banned_ips [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #42S02Table 'rforum.banned_ips' doesn't exist: SELECT * FROM banned_ips ):
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:243:in `execute'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/mysql_adapter.rb:399:in `select'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:427:in `find_by_sql'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:997:in `find_every'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:418:in `find'
+    /lib/authenticated_system.rb:30:in `ip_banned?'
+    /lib/authenticated_system.rb:38:in `ip_banned_redirect'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:456:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:456:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:435:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateForums (1)
+  [4;35;1mSQL (0.078000)[0m   [0mCREATE TABLE forums (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `description` text DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (2)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'users': DROP TABLE users[0m
+  [4;35;1mSQL (0.062000)[0m   [0mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `crypted_password` varchar(40) DEFAULT NULL, `salt` varchar(40) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `remember_token` varchar(255) DEFAULT NULL, `remember_token_expires_at` datetime DEFAULT NULL, `previous_login` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to UserAdmin (3)
+  [4;36;1mSQL (0.235000)[0m   [0;1mALTER TABLE users ADD `admin` tinyint(1)[0m
+  [4;35;1mSQL (0.172000)[0m   [0mALTER TABLE users ADD `signature` varchar(255)[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreatePosts (4)
+  [4;36;1mSQL (0.078000)[0m   [0;1mCREATE TABLE posts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `user_id` int(11) DEFAULT NULL, `topic_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.031000)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTopics (5)
+  [4;35;1mSQL (0.078000)[0m   [0mCREATE TABLE topics (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `forum_id` int(11) DEFAULT NULL, `subject` varchar(255) DEFAULT NULL, `user_id` int(11) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `locked` tinyint(1) DEFAULT NULL, `views` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateEdits (6)
+  [4;36;1mSQL (0.078000)[0m   [0;1mCREATE TABLE edits (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` text DEFAULT NULL, `version` int(11) DEFAULT NULL, `user_id` int(11) DEFAULT NULL, `post_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.031000)[0m   [0mUPDATE schema_info SET version = 6[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to OtherUserStuff (7)
+  [4;35;1mSQL (0.156000)[0m   [0mALTER TABLE users ADD `login_time` datetime[0m
+  [4;36;1mSQL (0.172000)[0m   [0;1mALTER TABLE users ADD `banned_by` int(11)[0m
+  [4;35;1mSQL (0.188000)[0m   [0mALTER TABLE users ADD `ban_time` datetime[0m
+  [4;36;1mSQL (0.234000)[0m   [0;1mALTER TABLE users ADD `ban_reason` varchar(255)[0m
+  [4;35;1mSQL (0.219000)[0m   [0mALTER TABLE users ADD `ban_times` int(11)[0m
+  [4;36;1mSQL (0.078000)[0m   [0;1mCREATE TABLE banned_ips (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255) DEFAULT NULL, `reason` varchar(255) DEFAULT NULL, `banned_by` int(11) DEFAULT NULL, `ban_time` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.031000)[0m   [0mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to SomeMoreUserStuff (8)
+  [4;35;1mSQL (0.188000)[0m   [0mALTER TABLE users ADD `location` varchar(255)[0m
+  [4;36;1mSQL (0.203000)[0m   [0;1mALTER TABLE users ADD `description` text[0m
+  [4;35;1mSQL (0.203000)[0m   [0mALTER TABLE users ADD `website` text[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mUPDATE schema_info SET version = 8[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM banned_ips[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSHOW KEYS FROM banned_ips[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM edits[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM edits[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM forums[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM posts[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM topics[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM users[0m
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:22:59) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:07:59') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01600 (9%) | 200 OK [http://localhost/]
+AccountsController: missing default helper path accounts_helper
+
+
+Processing AccountsController#login (for 127.0.0.1 at 2007-08-16 21:23:01) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"login", "controller"=>"accounts"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+Rendering  within layouts/application
+Rendering accounts/login
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/accounts/login]
+AccountsController: missing default helper path accounts_helper
+
+
+Processing AccountsController#signup (for 127.0.0.1 at 2007-08-16 21:23:04) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"signup", "controller"=>"accounts"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+Rendering  within layouts/application
+Rendering accounts/signup
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/accounts/signup]
+AccountsController: missing default helper path accounts_helper
+
+
+Processing AccountsController#signup (for 127.0.0.1 at 2007-08-16 21:23:11) [POST]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"user"=>{"password_confirmation"=>"7b10fbb", "login"=>"Radar", "password"=>"7b10fbb", "email"=>"radar@frozenplague.net"}, "commit"=>"Sign up", "action"=>"signup", "controller"=>"accounts"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'radar') LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'radar@frozenplague.net') LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO users (`ban_time`, `salt`, `updated_at`, `ban_reason`, `banned_by`, `crypted_password`, `signature`, `admin`, `ban_times`, `remember_token_expires_at`, `previous_login`, `website`, `description`, `login_time`, `remember_token`, `login`, `created_at`, `email`, `location`) VALUES(NULL, '8798ca8596e729a456808010a94d3fdbd7dcefa7', '2007-08-16 21:23:11', NULL, NULL, 'e5150949d84297e5edcf8a6b8d00647e920bffd2', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Radar', '2007-08-16 21:23:11', 'radar@frozenplague.net', NULL)[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.09400 (10 reqs/sec) | DB: 0.06200 (65%) | 302 Found [http://localhost/accounts/signup]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:23:11) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:08:11') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01500 (10%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:24:02) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:09:02') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:24:31) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:09:31') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.01600 (9%) | DB: 0.01600 (9%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:24:39) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:09:39') [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01600 (20%) | DB: 0.01600 (20%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:01) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.015000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:01') [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01600 (20%) | DB: 0.03100 (39%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:07) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:07') [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.15700 (6 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (19%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:13) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:13') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01600 (20%) | DB: 0.01500 (19%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:19) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:19') [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.07900 (12 reqs/sec) | Rendering: 0.01600 (20%) | DB: 0.01600 (20%) | 200 OK [http://localhost/]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:38) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:38') [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01500 (19%) | DB: 0.01600 (20%) | 200 OK [http://localhost/forums]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#new (for 127.0.0.1 at 2007-08-16 21:25:39) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"new", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+Rendering  within layouts/application
+Rendering forums/new
+Rendered forums/_form (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.00000 (0%) | 200 OK [http://localhost/forums/new]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#create (for 127.0.0.1 at 2007-08-16 21:25:45) [POST]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"commit"=>"Create", "forum"=>{"title"=>"Maybe I Should", "description"=>"And so I shall"}, "action"=>"create", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.015000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO forums (`title`, `description`) VALUES('Maybe I Should', 'And so I shall')[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.09300 (10 reqs/sec) | DB: 0.06200 (66%) | 302 Found [http://localhost/forums]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2007-08-16 21:25:45) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users [0m
+Rendering  within layouts/application
+Rendering admin/index
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.01600 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/admin]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#index (for 127.0.0.1 at 2007-08-16 21:25:49) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"index", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Load (0.015000)[0m   [0;1mSELECT * FROM forums [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (login_time < '2007-08-16 21:10:49') [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics [0m
+Rendering  within layouts/application
+Rendering forums/index
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics WHERE (topics.forum_id = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT posts.* FROM posts INNER JOIN topics ON posts.topic_id = topics.id WHERE ((topics.forum_id = 1)) [0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (27%) | 200 OK [http://localhost/forums]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#show (for 127.0.0.1 at 2007-08-16 21:25:50) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"forums"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering forums/show
+  [4;35;1mTopic Columns (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM topics WHERE (topics.forum_id = 1) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.01600 (25%) | 200 OK [http://localhost/forums/1]
+ForumsController: missing default helper path forums_helper
+
+
+Processing ForumsController#show (for 127.0.0.1 at 2007-08-16 21:26:30) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"forums"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mForum Load (0.000000)[0m   [0mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering forums/show
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM topics WHERE (topics.forum_id = 1) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.04700 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/forums/1]
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2007-08-16 21:26:34) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"new", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering topics/new
+Rendered topics/_form (0.00000)
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.09400 (75%) | DB: 0.01600 (12%) | 200 OK [http://localhost/forums/1/topics/new]
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2007-08-16 21:26:43) [POST]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"commit"=>"Create", "post"=>{"text"=>"[b]SHOULD WORK[/b]", "user_id"=>"1"}, "topic"=>{"subject"=>"Testing Formatting Tags", "forum_id"=>"1", "user_id"=>"1"}, "action"=>"create", "controller"=>"topics", "forum_id"=>"1"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO topics (`subject`, `forum_id`, `views`, `user_id`, `created_at`, `locked`) VALUES('Testing Formatting Tags', 1, NULL, 1, '2007-08-16 21:26:43', NULL)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO posts (`topic_id`, `updated_at`, `text`, `user_id`, `created_at`) VALUES(1, '2007-08-16 21:26:44', '[b]SHOULD WORK[/b]', 1, '2007-08-16 21:26:44')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mForum Load (0.000000)[0m   [0mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+Redirected to http://localhost:3000/forums/1/topics/1
+Completed in 0.14000 (7 reqs/sec) | DB: 0.06200 (44%) | 302 Found [http://localhost/forums/1/topics]
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:26:44) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mTopic Columns (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mTopic Load (0.000000)[0m   [0;1mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mTopic Update (0.000000)[0m   [0;1mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 1, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mForum Load (0.000000)[0m   [0mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;35;1mPost Columns (0.000000)[0m   [0mSHOW FIELDS FROM posts[0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mEdit Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM edits[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04600 (36%) | DB: 0.04700 (37%) | 200 OK [http://localhost/forums/1/topics/1]
+PostsController: missing default helper path posts_helper
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2007-08-16 21:28:17) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"posts"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mPost Columns (0.000000)[0m   [0mSHOW FIELDS FROM posts[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering posts/edit
+  [4;35;1mTopic Columns (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mTopic Load (0.000000)[0m   [0;1mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+Rendered posts/_form (0.00000)
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.01600 (11%) | DB: 0.00000 (0%) | 200 OK [http://localhost/posts/1;edit]
+PostsController: missing default helper path posts_helper
+
+
+Processing PostsController#update (for 127.0.0.1 at 2007-08-16 21:28:20) [PUT]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"commit"=>"Update", "post"=>{"text"=>"*SHOULD WORK*"}, "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"posts"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.015000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Update (0.000000)[0m   [0mUPDATE posts SET `created_at` = '2007-08-16 21:26:44', `text` = '*SHOULD WORK*', `user_id` = 1, `updated_at` = '2007-08-16 21:28:20', `topic_id` = 1 WHERE `id` = 1[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTopic Columns (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mTopic Load (0.000000)[0m   [0;1mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+Redirected to http://localhost:3000/forums/1/topics/1
+Completed in 0.10900 (9 reqs/sec) | DB: 0.04600 (42%) | 302 Found [http://localhost/posts/1]
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:28:21) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mTopic Load (0.000000)[0m   [0mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mTopic Update (0.000000)[0m   [0mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 2, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mEdit Columns (0.000000)[0m   [0mSHOW FIELDS FROM edits[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.user_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `textilize' for #<#<Class:0x481d6a8>:0x481d680>) on line #39 of app/views/topics/show.rhtml:
+36: <% end %>
+37: <b>Posts:</b> <%= post.user.posts.size %><br>
+38: <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
+39: 			<%= bbcode(sanitize(post.text)) %><% unless post.user.signature.blank? %><br>
+40: 			____________<br>
+41: 			<%= bbcode(sanitize(post.user.signature)) %>
+42: 			<% end %>
+
+    #{RAILS_ROOT}/app/helpers/application_helper.rb:14:in `bbcode'
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:39:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `method_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/has_many_association.rb:98:in `method_missing'
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:14:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:28:56) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mBannedIp Load (0.000000)[0m   [0;1mSELECT * FROM banned_ips [0m
+  [4;35;1mTopic Columns (0.000000)[0m   [0mSHOW FIELDS FROM topics[0m
+  [4;36;1mTopic Load (0.000000)[0m   [0;1mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mTopic Update (0.000000)[0m   [0;1mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 3, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;36;1mForum Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM forums[0m
+  [4;35;1mForum Load (0.000000)[0m   [0mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;35;1mPost Columns (0.000000)[0m   [0mSHOW FIELDS FROM posts[0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mEdit Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM edits[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.user_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `textilize' for #<#<Class:0x4625314>:0x46252c4>) on line #39 of app/views/topics/show.rhtml:
+36: <% end %>
+37: <b>Posts:</b> <%= post.user.posts.size %><br>
+38: <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
+39: 			<%= textilize(bbcode(sanitize(post.text))) %><% unless post.user.signature.blank? %><br>
+40: 			____________<br>
+41: 			<%= bbcode(sanitize(post.user.signature)) %>
+42: 			<% end %>
+
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:39:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `method_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/has_many_association.rb:98:in `method_missing'
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:14:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:29:06) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mTopic Load (0.000000)[0m   [0mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mTopic Update (0.000000)[0m   [0mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 4, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.062000)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mEdit Columns (0.000000)[0m   [0mSHOW FIELDS FROM edits[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `textilize' for "*SHOULD WORK*":String) on line #39 of app/views/topics/show.rhtml:
+36: <% end %>
+37: <b>Posts:</b> <%= post.user.posts.size %><br>
+38: <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
+39: 			<%= bbcode(sanitize(post.text)).textilize %><% unless post.user.signature.blank? %><br>
+40: 			____________<br>
+41: 			<%= bbcode(sanitize(post.user.signature)) %>
+42: 			<% end %>
+
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:39:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `method_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/has_many_association.rb:98:in `method_missing'
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:14:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:29:29) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mTopic Load (0.000000)[0m   [0mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mTopic Update (0.000000)[0m   [0mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 5, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mEdit Columns (0.000000)[0m   [0mSHOW FIELDS FROM edits[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `textilize' for "*SHOULD WORK*":String) on line #39 of app/views/topics/show.rhtml:
+36: <% end %>
+37: <b>Posts:</b> <%= post.user.posts.size %><br>
+38: <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
+39: 			<%= bbcode(sanitize(post.text)).textilize %><% unless post.user.signature.blank? %><br>
+40: 			____________<br>
+41: 			<%= bbcode(sanitize(post.user.signature)) %>
+42: 			<% end %>
+
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:39:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/association_proxy.rb:123:in `method_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/associations/has_many_association.rb:98:in `method_missing'
+    #{RAILS_ROOT}/app/views/topics/show.rhtml:14:in `_run_rhtml_47app47views47topics47show46rhtml'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:78:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/rails.rb:76:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:618:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:617:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:736:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel.rb:720:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:271:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/configurator.rb:270:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:127:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/lib/mongrel/command.rb:211:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.0.1-mswin32/bin/mongrel_rails:243
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:5
+
+
+Rendering C:/ruby/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+TopicsController: missing default helper path topics_helper
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2007-08-16 21:29:35) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"topics", "forum_id"=>"1"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mTopic Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mTopic Load (0.000000)[0m   [0mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mTopic Update (0.000000)[0m   [0mUPDATE topics SET `locked` = NULL, `created_at` = '2007-08-16 21:26:43', `views` = 6, `user_id` = 1, `forum_id` = 1, `subject` = 'Testing Formatting Tags' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/application
+Rendering topics/show
+  [4;35;1mForum Columns (0.000000)[0m   [0mSHOW FIELDS FROM forums[0m
+  [4;36;1mForum Load (0.000000)[0m   [0;1mSELECT * FROM forums WHERE (forums.`id` = 1) [0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.topic_id = 1) [0m
+  [4;36;1mPost Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;35;1mEdit Columns (0.000000)[0m   [0mSHOW FIELDS FROM edits[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM edits WHERE (edits.post_id = 1) [0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Load (0.000000)[0m   [0;1mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM posts WHERE (posts.user_id = 1) [0m
+Completed in 0.26600 (3 reqs/sec) | Rendering: 0.15600 (58%) | DB: 0.07900 (29%) | 200 OK [http://localhost/forums/1/topics/1]
+PostsController: missing default helper path posts_helper
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2007-08-16 21:31:01) [GET]
+  Session ID: a126f59e95d038d8bcb2881cb385d1ab
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"posts"}
+  [4;35;1mBannedIp Load (0.000000)[0m   [0mSELECT * FROM banned_ips [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mPost Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM posts[0m
+  [4;35;1mPost Load (0.000000)[0m   [0mSELECT * FROM posts WHERE (posts.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering posts/edit
+  [4;36;1mTopic Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM topics[0m
+  [4;35;1mTopic Load (0.000000)[0m   [0mSELECT * FROM topics WHERE (topics.`id` = 1) [0m
+Rendered posts/_form (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (49%) | 200 OK [http://localhost/posts/1;edit]

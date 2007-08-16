@@ -47,7 +47,7 @@ None
 <b>Posts: </b><%= @posts %><br>
 <b>Topics: </b><%= @topics %><br>
 <b>Posts/Topic: </b><%= @ppt %><br>
-<b>Users on in the last 15 minutes:</b> <%= @lusers %>
+<b>Users on in the last 15 minutes:</b> <%= @lusers.blank? ? "None" : @lusers %>
 </td></tr>
 </tbody>
 </table>

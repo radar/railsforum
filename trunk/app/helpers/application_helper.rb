@@ -1,13 +1,16 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def bbcode(text)
+    
+    #cool stuff (well, at least I think so)
     text.gsub!(/\[code=?["']?(.*?)["']?\](.*?)\[\/code\]/mis) { "<div class='code'><b>" << $1 << "</b><br>" << code_highlight($2) << "</div>" }
-    text.gsub!(/\[quote=?["']?(.*?)["']?\](.*?)\[\/quote\]/mis) { "<div align='center'><div class='quote'><b>" << $1 << "</b><br>\"" << $2 << 
+    text.gsub!(/\[quote=?["']?(.*?)["']?\](.*?)\[\/quote\]/mis) { "<div align='center'><div class='quote'><b>" << $1 << " wrote:</b><br>\"" << $2 << 
 "\"</div></div>" }
     text.gsub!(/\[term\](.*?)\[\/term\]/m) { "<span class='term'>" << $1.gsub(/^\r\n/,"").gsub("<","&lt;").gsub(">","&gt;") << "</span>" }
     text.gsub!(/\[url=["']?(.*?)["']?\](.*?)\[\/url\]/mis) { "<a href='" << $1 << "'>" << $2 << "</a>" }
     text.gsub!(/\[topic=["']?(.*?)["']?\](.*?)\[\/topic\]/mis) { "<a href='/topics/show/" << $1 << "'>" << $2  << "</a>" }
     text.gsub!(/\n/) { "<br>" }
+    
     text
   end
   def code_highlight(code)
