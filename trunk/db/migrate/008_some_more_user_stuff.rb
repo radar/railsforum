@@ -6,5 +6,8 @@ class SomeMoreUserStuff < ActiveRecord::Migration
   end
   
   def self.down
+    remove_column :users, :location
+    remove_column :users, :description
+    remove_column :users, :website
   end
 end
