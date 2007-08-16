@@ -1,25 +1,25 @@
 class AccountsController < ApplicationController
   before_filter :store_location, :only => [:profile, :list]
   before_filter :is_admin_redirect, :only => [:ban, :ban_ip]
-
+  
   def login
     return unless request.post?
     self.current_user = User.authenticate(params[:login], params[:password])
-      if logged_in?
-	current_user.update_attribute("previous_login",current_user.login_time)
-    current_user.update_attribute("login_time",Time.now)
+    if logged_in?
+      current_user.update_attribute("previous_login",current_user.login_time)
+      current_user.update_attribute("login_time",Time.now)
       if params[:remember_me] == 1
         self.current_user.remember_me
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
-	        flash[:notice] = "Logged in successfully"
+      flash[:notice] = "Logged in successfully"
       redirect_back_or_default(:action => "index")
-
+      
     else
-	flash[:notice] = "The username or password you provided is incorrect. Please try again."
-      end
+      flash[:notice] = "The username or password you provided is incorrect. Please try again."
+    end
   end
-
+  
   def signup
     @user = User.new(params[:user])
     return unless request.post?
@@ -27,7 +27,7 @@ class AccountsController < ApplicationController
     self.current_user = @user
     redirect_back_or_default(forums_path)
     flash[:notice] = "Thanks for signing up!"
-  rescue ActiveRecord::RecordInvalid
+    rescue ActiveRecord::RecordInvalid
     render :action => 'signup'
   end
   
@@ -41,59 +41,59 @@ class AccountsController < ApplicationController
   
   def profile
     @user = current_user
-  if request.post?
-	  params[:user][:crypted_password] = @user.encrypt(params[:user][:password])  if params[:user][:password] == params[:user][:password_confirmation] && !params[:user][:password].blank? 
-	  flash[:notice] = "Password has been changed. Please remember to use this password from now on. Your profile has been updated." unless params[:user][:crypted_password].nil?
-  @user.update_attributes(params[:user])
-  flash[:notice] ||= "Your profile has been updated."
-  end
+    if request.post?
+      params[:user][:crypted_password] = @user.encrypt(params[:user][:password])  if params[:user][:password] == params[:user][:password_confirmation] && !params[:user][:password].blank? 
+      flash[:notice] = "Password has been changed. Please remember to use this password from now on. Your profile has been updated." unless params[:user][:crypted_password].nil?
+      @user.update_attributes(params[:user])
+      flash[:notice] ||= "Your profile has been updated."
+    end
   end
   #maybe move these methods into their own controller, they have nothing to do with users.
   def ban_ip
-  if request.post?
-	if params[:banned_ip][:ip].nil?
-		flash[:notice] = "You must specify an IP to ban."
-	        redirect_to :action => "ban_ip"
-	end
-
-  params[:banned_ip][:ban_time] = Chronic.parse(params[:banned_ip][:ban_time])
-  params[:banned_ip][:ip].gsub!(".","\.").gsub("*","[0-9]{1,3}")
-  params[:banned_ip][:banned_by] = session[:user]
-  BannedIp.create(params[:banned_ip])
-  flash[:notice] = "The IP range has been banned."
-  end
-  @banned = BannedIp.find(:all)
+    if request.post?
+      if params[:banned_ip][:ip].nil?
+        flash[:notice] = "You must specify an IP to ban."
+        redirect_to :action => "ban_ip"
+      end
+      
+      params[:banned_ip][:ban_time] = Chronic.parse(params[:banned_ip][:ban_time])
+      params[:banned_ip][:ip].gsub!(".","\.").gsub("*","[0-9]{1,3}")
+      params[:banned_ip][:banned_by] = session[:user]
+      BannedIp.create(params[:banned_ip])
+      flash[:notice] = "The IP range has been banned."
+    end
+    @banned = BannedIp.find(:all)
   end
   #This one too.
   def remove_banned_ip
-  @banned_ip = BannedIp.find(params[:id]).destroy
-  flash[:notice] = "The IP range has been unbanned."
-  redirect_to :action => :ban_ip
+    @banned_ip = BannedIp.find(params[:id]).destroy
+    flash[:notice] = "The IP range has been unbanned."
+    redirect_to :action => :ban_ip
   end
   def user
-  @user = User.find_by_login(params[:login])
-  @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
+    @user = User.find_by_login(params[:login])
+    @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
   end
   
   def list
-  @users = User.find(:all)
+    @users = User.find(:all)
   end
   
   def ban
-  @user = User.find(:first)
-  if request.post?
-  params[:user][:banned_by] = current_user
-  params[:user][:ban_time] = Chronic.parse(params[:user][:ban_time])
-  @user.update_attributes(params[:user])
-  @user.increment!('ban_times')
-  flash[:notice] = "User has been banned!"
-  redirect_back_or_default(:action => "list")
-  end
+    @user = User.find(:first)
+    if request.post?
+      params[:user][:banned_by] = current_user
+      params[:user][:ban_time] = Chronic.parse(params[:user][:ban_time])
+      @user.update_attributes(params[:user])
+      @user.increment!('ban_times')
+      flash[:notice] = "User has been banned!"
+      redirect_back_or_default(:action => "list")
+    end
   end
   
   def ip_is_banned
-	  unless ip_banned?
-	  redirect_to forums_path
-	  end
-	  end
+    unless ip_banned?
+      redirect_to forums_path
+    end
+  end
 end

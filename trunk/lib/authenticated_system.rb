@@ -27,20 +27,20 @@ module AuthenticatedSystem
     end
   end
   def ip_banned?
-	  @ips = BannedIp.find(:all).select do |ip|
-	  !Regexp.new(ip.ip).match(request.remote_addr).nil?
+    @ips = BannedIp.find(:all).select do |ip|
+      !Regexp.new(ip.ip).match(request.remote_addr).nil?
+    end
+    unless @ips.empty?
+      flash[:ip] = @ips.first
+    end
   end
-  unless @ips.empty?
-  flash[:ip] = @ips.first
-  end
-  	  end
   def ip_banned_redirect
-	  if ip_banned?
-		  redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"
-	  end
-	  end
+    if ip_banned?
+      redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"
+    end
+  end
   def user_banned?
-  logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
+    logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end
   
   def logged_in?
@@ -106,7 +106,7 @@ module AuthenticatedSystem
     respond_to do |accepts|
       accepts.html do
         store_location
-	flash[:notice] = "You need to be logged in to do that."
+        flash[:notice] = "You need to be logged in to do that."
         redirect_to :controller => 'accounts', :action => 'login'
       end
       accepts.xml do
