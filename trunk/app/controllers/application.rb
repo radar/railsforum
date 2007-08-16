@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
   require 'chronic'
   require 'custom_methods'
   before_filter :login_from_cookie
-  before_filter :ip_banned?
+  before_filter :ip_banned_redirect
 end

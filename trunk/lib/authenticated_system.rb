@@ -14,7 +14,7 @@ module AuthenticatedSystem
       true
     else
       flash[:notice] = "You need to be an admin to do that."
-      redirect_to :controller => "account", :action => "login"
+      redirect_to :controller => "accounts", :action => "login"
       false
     end
   end
@@ -28,13 +28,17 @@ module AuthenticatedSystem
   end
   def ip_banned?
 	  @ips = BannedIp.find(:all).select do |ip|
-	  Regexp.new(ip.ip).match(request.remote_addr).nil?
+	  !Regexp.new(ip.ip).match(request.remote_addr).nil?
   end
   unless @ips.empty?
   flash[:ip] = @ips.first
-  redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:controller] == "accounts" && params[:action] == "ip_is_banned"
   end
   	  end
+  def ip_banned_redirect
+	  if ip_banned?
+		  redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"
+	  end
+	  end
   def user_banned?
   logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end

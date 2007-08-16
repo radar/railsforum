@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   before_filter :store_location, :only => [:profile, :list]
-  before_filter :is_admin?, :only => [:ban, :ban_ip]
+  before_filter :is_admin_redirect, :only => [:ban, :ban_ip]
 
   def login
     return unless request.post?
@@ -51,8 +51,14 @@ class AccountsController < ApplicationController
   #maybe move these methods into their own controller, they have nothing to do with users.
   def ban_ip
   if request.post?
+	if params[:banned_ip][:ip].nil?
+		flash[:notice] = "You must specify an IP to ban."
+	        redirect_to :action => "ban_ip"
+	end
+
   params[:banned_ip][:ban_time] = Chronic.parse(params[:banned_ip][:ban_time])
-  params[:banned_ip][:ip].gsub!(".","\.").gsub!("*","[0-9]{1,3}")
+  params[:banned_ip][:ip].gsub!(".","\.").gsub("*","[0-9]{1,3}")
+  params[:banned_ip][:banned_by] = session[:user]
   BannedIp.create(params[:banned_ip])
   flash[:notice] = "The IP range has been banned."
   end
@@ -66,7 +72,7 @@ class AccountsController < ApplicationController
   end
   def user
   @user = User.find_by_login(params[:login])
-  @posts_percentage = @user.posts.size.to_f / Post.count.to_f * 100
+  @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
   end
   
   def list
@@ -79,6 +85,7 @@ class AccountsController < ApplicationController
   params[:user][:banned_by] = current_user
   params[:user][:ban_time] = Chronic.parse(params[:user][:ban_time])
   @user.update_attributes(params[:user])
+  @user.increment!('ban_times')
   flash[:notice] = "User has been banned!"
   redirect_back_or_default(:action => "list")
   end

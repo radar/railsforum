@@ -19,6 +19,7 @@ if !@user.email.blank? %>
 This user was banned by <%= @user.banned_by.login %> and their ban expires in <%= time_ago_in_words(@user.ban_time) %>. <br><br>The reason stated was: <i>"<%= @user.ban_reason %>"</i><br><br>
 This user has been banned <%= @user.ban_times %> times.
 <% end %>
+<b>Description:</b> <%= @user.description %>
 </td>
 </tr>
 </tbody>

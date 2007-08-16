@@ -4,6 +4,12 @@ class ForumsController < ApplicationController
 	
 	def index
 		@forums = Forum.find(:all)
+		#perhaps make this like the good old days (bold, red fonts for administrators and so on)
+		@lusers = User.find(:all, :conditions => ['login_time < ?',Time.now-15.minutes]).map { |u| u.login }.to_sentence
+		@users = User.count
+		@posts = Post.count
+		@topics = Topic.count
+		@ppt = @posts > 0 ? @posts / @topics : 0
 	end
 	
 	def new

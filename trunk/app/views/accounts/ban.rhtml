@@ -4,7 +4,7 @@
 <tbody>
 <tr><td><b>Ban Reason</b></td><td><%= text_field("user","ban_reason") %></td></tr>
 <tr><td><b>Ban Until</b></td><td><%= text_field("user","ban_time") %>
-<%= observe_field("user_ban_time", :update => "date", :url => { :controller => "chronic", :action => "time" }, :with => "duration", :frequency => 1.0) %>
+<%= observe_field("user_ban_time", :url => { :controller => "chronic", :action => "time" }, :with => "duration", :frequency => 0.5) %>
 <div id='date'></div>
 </td></tr>
 </tbody>

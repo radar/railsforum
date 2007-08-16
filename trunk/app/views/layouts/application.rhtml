@@ -21,7 +21,7 @@
 <%= link_to "Login", :controller => "accounts", :action => "login" %> |
 <a href='/accounts/signup'>Signup</a>
 <% else %>
-Logged in as <%= current_user.login %> |
+Logged in as <%= link_to current_user.login, :controller => "accounts", :action => "user", :id => current_user.login %> |
  <%= link_to("Profile", :controller => "accounts", :action => "profile") %> |
  <%= link_to("Member List", :controller => "accounts", :action => "list") %> |
  <%= link_to("Logout", :controller => "accounts", :action => "logout")  %>
@@ -31,6 +31,8 @@ Logged in as <%= current_user.login %> |
 The time is now <%= Time.now.ordinalize %> </div><br><br>
 <% if user_banned? %>
 <div class='ban-box' align='center'><br><br><h1>YOU ARE BANNED</h1><%= current_user.banned_by.login %> banned you and stated "<%= current_user.ban_reason %>" as the reason. Your ban expires in <%= time_ago_in_words(current_user.ban_time) %><br><br></div>
+<% elsif flash[:ip] %>
+<div class='ban-box' align='center'><br><br><h1>YOU ARE BANNED</h1>This ban will expire in <%= time_ago_in_words(flash[:ip].ban_time) %> and was set by <%= flash[:ip].user.login %> stating "<%= flash[:ip].reason %>" as the reason.<br> </div>
 <% else %>
 <%= yield %>
 <% end %>

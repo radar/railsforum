@@ -14,7 +14,11 @@ class OtherUserStuff < ActiveRecord::Migration
   end
 
   def self.down
-	  remove_column :users, :login_time
-	  
+  remove_column :users, :login_time
+  remove_column :users, :banned_by
+  remove_column :users, :ban_time
+  remove_column :users, :ban_reason
+  remove_column :users, :ban_times
+  drop_table :banned_ips
   end
 end

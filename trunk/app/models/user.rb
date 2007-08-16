@@ -15,11 +15,19 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :topics
   has_many :edits
+  
+  belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
+  has_many :banned_ips, :foreign_key => "banned_by"
  
   before_save :encrypt_password
-  belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
+  before_save :make_admin
 
-  # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
+
+  def make_admin
+	 self.admin = true if User.count == 0
+  end
+
+# Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find_by_login(login) # need to get the salt
     u && u.authenticated?(password) ? u : nil
