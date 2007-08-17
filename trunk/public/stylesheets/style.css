@@ -131,6 +131,9 @@ padding:0px;
 .fieldWithErrors input, .fieldWithErrors textarea {
 border:3px solid red;
 }
+.errorExplanation {
+	font-size:10pt;
+}
 .not-working {
 background:#de0000;
 color:white;

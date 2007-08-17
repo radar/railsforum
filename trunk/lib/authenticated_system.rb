@@ -3,14 +3,14 @@ module AuthenticatedSystem
   # Preloads @current_user with the user model if they're logged in.
   
   def is_admin?
-    if logged_in? && current_user.admin == true
+    if logged_in? && current_user.userlvl == 3
       true
     else
       false
     end
   end
   def is_admin_redirect
-    if logged_in? && current_user.admin == true
+    if logged_in? && current_user.userlvl == 3
       true
     else
       flash[:notice] = "You need to be an admin to do that."
@@ -18,14 +18,8 @@ module AuthenticatedSystem
       false
     end
   end
+  #MOVE TO OWN LIBRARY!
   
-  def is_post_owner_or_admin?(post_id)
-    if logged_in? && (Post.find(post_id).user == current_user || current_user.admin?)
-      true
-    else
-      false
-    end
-  end
   def ip_banned?
     @ips = BannedIp.find(:all).select do |ip|
       !Regexp.new(ip.ip).match(request.remote_addr).nil?
@@ -135,7 +129,7 @@ module AuthenticatedSystem
   # Inclusion hook to make #current_user and #logged_in?
   # available as ActionView helper methods.
   def self.included(base)
-    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :is_post_owner_or_admin?, :ip_banned?, :user_banned?
+    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?
   end
   
   # When called with before_filter :login_from_cookie will check for an :auth_token

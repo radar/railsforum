@@ -6,7 +6,7 @@
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '1.2.3' unless defined? RAILS_GEM_VERSION
-
+USERLEVELS = [{:id => 1, :name => "Users"}, {:id => 2, :name => "Moderators" }, {:id => 3, :name => "Administrators" }]
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|

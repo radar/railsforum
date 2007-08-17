@@ -1,14 +1,23 @@
 class TopicsController < ApplicationController
   before_filter :login_required, :except => [:show]
+  before_filter :is_viewable?, :only => [:show]
+  #rescuing needed.
   def new
     @forum = Forum.find(params[:forum_id])
   end
   def create
-    @topic = Topic.create!(params[:topic])
-    params[:post][:topic_id] = @topic.id
-    @post = Post.create!(params[:post])
+    Topic.transaction do
+      @topic = Topic.new(params[:topic].merge(:user_id => current_user.id, :forum_id => params[:forum_id]))
+      @post = @topic.posts.build(params[:post].merge!(:user_id => current_user.id))
+      @topic.save!
+    end
     flash[:notice] = "Topic has been created."
     redirect_to topic_path(@topic.forum.id,@topic.id)
+    #example of a "proper" rescue
+    rescue Exception => @e
+    flash[:notice] = "Topic was not created."
+    @forum = Forum.find(params[:forum_id])
+    render :template => "topics/new"
   end
   def show
     @topic = Topic.find(params[:id])

@@ -24,8 +24,12 @@ class User < ActiveRecord::Base
   
   
   def make_admin
-    self.admin = true if User.count == 0
+    self.userlvl = 3 if User.count == 0
   end
+  
+  def admin?
+	  self.userlvl == 3
+	  end
   
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)

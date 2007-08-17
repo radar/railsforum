@@ -1,7 +1,8 @@
-
 <%= link_to("rForum", forums_path) %> -> <%= @forum.title %>
 <h2>Viewing Forum: <%= @forum.title %></h2>
+<% if can_create_topics?(@forum) %>
 <%= link_to("New Topic", new_topic_path(@forum.id)) %>
+<% end %>
 <table cellspacing='0' cellpading='0' width='100%' class='forum' rules='groups'>
 	<% unless @forum.topics.empty? %>
 	<% form_tag moderate_topics_path(@forum.id) do %>
