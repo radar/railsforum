@@ -18,7 +18,6 @@ module AuthenticatedSystem
       false
     end
   end
-  #MOVE TO OWN LIBRARY!
   
   def ip_banned?
     @ips = BannedIp.find(:all).select do |ip|
@@ -38,8 +37,6 @@ module AuthenticatedSystem
   def user_banned?
     logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end
-  
-  #END OF MOVE
   
   def active_user
     if logged_in?

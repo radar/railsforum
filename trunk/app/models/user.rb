@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   
   attr_accessor :password
   
+  #validations
   validates_presence_of     :login, :email
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
@@ -12,24 +13,32 @@ class User < ActiveRecord::Base
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :email, :case_sensitive => false
   
+  #has
   has_many :posts
   has_many :topics
-  has_many :edits
-  
-  belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
+  has_many :messages
   has_many :banned_ips, :foreign_key => "banned_by"
   
+  #belongs
+  belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
+  
+  #before
   before_save :encrypt_password
   before_save :make_admin
   
+  #after
+  
+  #acts
+  #find out why this isn't working!
+#  acts_as_ferret
   
   def make_admin
     self.userlvl = 3 if User.count == 0
   end
   
   def admin?
-	  self.userlvl == 3
-	  end
+    self.userlvl == 3
+  end
   
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)

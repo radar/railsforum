@@ -1,4 +1,21 @@
 module PermissionChecks
+  #ADMIN CHECKING
+  def is_admin?
+    if logged_in? && current_user.userlvl == 3
+      true
+    else
+      false
+    end
+  end
+  def is_admin_redirect
+    unless is_admin?
+      flash[:notice] = "You need to be an admin to do that."
+      redirect_to :controller => "accounts", :action => "login"
+      false
+    end
+  end
+  
+  
   #can the user create topics in this forum?
   def can_create_topics?
     id = params[:forum_id].nil? ? params[:id] : params[:forum_id]
@@ -42,7 +59,7 @@ module PermissionChecks
   
   #"borrowed" from authenticated_system
   def self.included(base)
-    base.send :helper_method, :can_create_topics?, :is_post_owner_or_admin?
+    base.send :helper_method, :can_create_topics?, :is_post_owner_or_admin?, :is_admin?
   end
   
   

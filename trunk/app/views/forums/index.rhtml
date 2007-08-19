@@ -17,7 +17,7 @@
 <td align='right'><% if !forum.topics.empty? %>
 <%= time_ago_in_words(forum.topics.last.posts.last.created_at) %> ago
 by <%= link_to(forum.topics.last.posts.last.user.login, :controller => "accounts", :action => "user", :id => forum.topics.last.posts.last.user.login)  %>
-in <%= link_to (forum.topics.last.subject, topic_path(forum.id,forum.topics.last.id)) %>
+in <%= link_to(forum.topics.last.subject, topic_path(forum.id,forum.topics.last.id)) %>
 <% else %>
 None
 <% end %>
@@ -30,7 +30,6 @@ None
 <thead>
 <tr><td colspan='5' align='center'><b>There are no forums. <% unless is_admin? %>Maybe an administrator should create one.<% else %><%= link_to "Maybe you should create a forum.", new_forum_path %><% end %></b></td>
 </thead>
-<<<<<<< .mine
 <% end %>
 
 <tfoot>

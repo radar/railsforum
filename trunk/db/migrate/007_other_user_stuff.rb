@@ -4,7 +4,7 @@ class OtherUserStuff < ActiveRecord::Migration
     add_column :users, :banned_by, :integer
     add_column :users, :ban_time, :datetime
     add_column :users, :ban_reason, :string
-    add_column :users, :ban_times, :integer
+    add_column :users, :ban_times, :integer, :default => 0
     create_table :banned_ips do |t|
       t.column 'ip', :string
       t.column 'reason', :string

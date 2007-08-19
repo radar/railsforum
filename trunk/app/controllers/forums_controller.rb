@@ -1,6 +1,6 @@
 class ForumsController < ApplicationController
   before_filter :is_admin_redirect, :only => [:create, :new]
-  before_filter :store_location, :except => [:create]
+  before_filter :store_location, :except => [:create, :delete]
   before_filter :is_visible?, :only => [:show]
   
   def index

@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   topics.resources :posts
 end
 end
-
+map.resources :messages, :member => { :sent => :get}
 map.resources :posts
 
   map.connect ':controller/:action/:id'

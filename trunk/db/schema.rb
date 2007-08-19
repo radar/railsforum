@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "banned_ips", :force => true do |t|
     t.column "ip",        :string
@@ -11,18 +11,22 @@ ActiveRecord::Schema.define(:version => 10) do
     t.column "ban_time",  :datetime
   end
 
-  create_table "edits", :force => true do |t|
-    t.column "text",    :text
-    t.column "version", :integer
-    t.column "user_id", :integer
-    t.column "post_id", :integer
-  end
-
   create_table "forums", :force => true do |t|
     t.column "title",             :string
     t.column "description",       :text
     t.column "is_visible_to",     :integer, :default => 1
     t.column "topics_created_by", :integer, :default => 1
+  end
+
+  create_table "messages", :force => true do |t|
+    t.column "from_id",      :integer
+    t.column "from_read",    :boolean
+    t.column "from_deleted", :boolean
+    t.column "to_id",        :integer
+    t.column "to_read",      :boolean
+    t.column "to_deleted",   :boolean
+    t.column "text",         :text
+    t.column "created_at",   :datetime
   end
 
   create_table "posts", :force => true do |t|

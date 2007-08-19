@@ -2,6 +2,7 @@ class TopicsController < ApplicationController
   before_filter :login_required, :except => [:show]
   before_filter :is_viewable?, :only => [:show]
   before_filter :can_create_topics?, :only => [:new, :create]
+  before_filter :store_location, :only => [:view, :new, :edit]
   #rescuing needed.
   def new
     @forum = Forum.find(params[:forum_id])

@@ -1,0 +1,26 @@
+<h2>Inbox</h2>
+<%= link_to "Send New Message", { :action => "new" } %>
+<table cellspacing='0' cellpadding='5' width='100%' class='forums'>
+	<thead>
+		<tr>
+			<td align='center' width='20'>Read</td>
+			<td align='center'>From</td>
+			<td align='center'>Time Sent</td>
+			</tr>
+	</thead>
+	<tbody>
+		<% unless @messages.empty? %>
+		<% for message in @messages %>
+		<tr>
+			<td align='center'><%= link_to(message.to_read? ? image_tag("old.jpg") : image_tag("new.jpg"), message_path(message.id))%></td>
+			<td align='center'><%= message.from.login %></td>
+			<td align='center'><%= time_ago_in_words(message.created_at) %> ago</td>
+		</tr>
+		</a>
+
+		<% end %>
+		<% else %>
+		<tr><td colspan='3' align='center'><b>You have no messages.</b></td></tr>
+		<% end %>
+	</tbody>
+</table>
