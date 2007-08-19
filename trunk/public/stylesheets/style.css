@@ -77,6 +77,10 @@ background:#e1f1ff;
 margin:0px;
 padding:0px;
 }
+.edit-note {
+	font-size:9pt;
+	color:#4f93cf;
+}
 .quote {
 width:90%;
 background:#a4d5ff;
@@ -133,13 +137,4 @@ border:3px solid red;
 }
 .errorExplanation {
 	font-size:10pt;
-}
-.not-working {
-background:#de0000;
-color:white;
-border:1px solid #780000;
-text-align:center;
-padding:5px;
-font-size:18pt;
-font-weight:bold;
 }

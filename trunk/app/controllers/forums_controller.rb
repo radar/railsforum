@@ -1,7 +1,7 @@
 class ForumsController < ApplicationController
   before_filter :is_admin_redirect, :only => [:create, :new]
   before_filter :store_location, :except => [:create]
-  before_filter :is_viewable?, :except => [:index]
+  before_filter :is_visible?, :only => [:show]
   
   def index
     logged_in? ? @forums = Forum.find(:all).select { |forum| forum.is_visible_to <= current_user.userlvl } : @forums = Forum.find(:all).select { |forum| forum.is_visible_to == 1 }

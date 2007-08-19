@@ -14,11 +14,7 @@ end %>
 <% for post in @topic.posts %>
 <thead>
 <tr><td rowspan='2' valign='top' width='15%'><b><%= post.user.login %></b></td>
-<td><%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %>
-<% if post.edits.size > 1 %>
-<%= link_to("Versions", :controller => "post", :action => "revision", :id => post.id) %>
-<% end %>
-</td>
+<td><%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %></td>
 <td align='right'>
 <%= link_to("Reply", reply_topic_path(@topic.forum.id,@topic.id)) %> |
 <%= link_to("Quote", :controller => "topics", :action => "reply", :id => @topic.id, :quote => post.id) %> 
@@ -36,13 +32,13 @@ end %>
 <% end %>
 <b>Posts:</b> <%= post.user.posts.size %><br>
 <b>Date Joined:</b> <%= post.user.created_at.strftime("%d-%m-%y") %></td><td valign='top' colspan='2'>
-			<%= textilize(bbcode(sanitize(post.text))) %><% unless post.user.signature.blank? %><br>
+			<%= textilize_without_paragraph(bbcode(sanitize(post.text))) %><% unless post.user.signature.blank? %><br>
 			____________<br>
 			<%= bbcode(sanitize(post.user.signature)) %>
 			<% end %>
-			<% if post.updated_at.nil? %>
-			<br>
-			<i>This post has been edited by <%= post.edits.last.user.login + ", " + distance_of_time_in_words(post.updated_at,Time.now) %> ago</i>
+			<% if post.updated_at %>
+			<br><br>
+			<span class='edit-note'>This post was edited by <%= post.editor.login %> <%= time_ago_in_words(post.updated_at) %> ago.</span>
 			<% end %></td>
 </tr>
 </tbody>

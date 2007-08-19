@@ -1,6 +1,6 @@
 <%= link_to("rForum", forums_path) %> -> <%= @forum.title %>
 <h2>Viewing Forum: <%= @forum.title %></h2>
-<% if can_create_topics?(@forum) %>
+<% if can_create_topics? %>
 <%= link_to("New Topic", new_topic_path(@forum.id)) %>
 <% end %>
 <table cellspacing='0' cellpading='0' width='100%' class='forum' rules='groups'>
@@ -45,7 +45,7 @@
 <% end %>
 <% else %>
 <thead>
-<tr><td align='center'><b>There are no topics for this forum. Why not <%= link_to "Create one?", new_topic_path(@forum.id) %></b></td></tr>
+<tr><td align='center'><b>There are no topics for this forum.  <%= "Why not " << link_to("create one?", new_topic_path(@forum.id)) if can_create_topics? %></b></td></tr>
 </thead>
 <% end %>
 </tbody>

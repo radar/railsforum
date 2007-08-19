@@ -1,8 +1,18 @@
 module PermissionChecks
   #can the user create topics in this forum?
-  def can_create_topics?(forum)
-   (logged_in? && forum.topics_created_by <= current_user.userlvl) || forum.topics_created_by == 1
+  def can_create_topics?
+    id = params[:forum_id].nil? ? params[:id] : params[:forum_id]
+    forum = Forum.find(id)
+    unless (logged_in? && forum.topics_created_by <= current_user.userlvl) || forum.topics_created_by == 1
+      if params[:action] == "new"
+        flash[:notice] = "You cannot create a topic in this forum."
+        redirect_back_or_default(forum_path(id))
+      end
+    else
+    true
+    end
   end
+  
   
   #is the user the owner of this post? are they an admin? 
   def is_post_owner_or_admin?(post_id)
@@ -16,16 +26,17 @@ module PermissionChecks
   #can the user see this?
   def is_viewable?
     forum = Topic.find(params[:id]).forum
-    if is_visible?(forum)
-      return true
+    if (logged_in? && forum.is_visible_to <= current_user.userlvl) || forum.is_visible_to == 1
+      true
     else
       flash[:notice] = "You are not able to view that."
       redirect_to forums_path
     end
   end
   
-  def is_visible?(forum)
-   (logged_in? && forum.is_visible_to <= current_user.userlvl) || forum.is_visible_to == 1
+  def is_visible?
+    forum = Forum.find(params[:id])
+     (logged_in? && forum.is_visible_to <= current_user.userlvl) || forum.is_visible_to == 1
   end
   
   

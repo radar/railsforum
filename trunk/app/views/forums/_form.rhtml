@@ -3,5 +3,4 @@
 <tr><td width='200px' valign='top'><b>Description:</b></td><td><%= text_area("forum","description", :cols => 40, :rows => 5) %></td></tr>
 <tr><td width='200px'><b>Is Visible To:</b></td><td><%= select "forum", "is_visible_to", USERLEVELS.map { |u| [u[:name],u[:id]] } %></td></tr>
 <tr><td width='200px'><b>Topics Creatable By:</b></td><td><%= select "forum", "topics_created_by", USERLEVELS.map { |u| [u[:name],u[:id]] } %></td></tr>
-<tr><td width='200px'><b>Who's Able To Reply:</b></td><td><%= select "forum", "able_to_reply", USERLEVELS.map { |u| [u[:name],u[:id]] } %></td></tr>
 </tbody>

@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   before_filter :login_required
   def edit
     @post = Post.find(params[:id])
+    unless is_post_owner_or_admin?(params[:id])
+      flash[:notice] = "You do not own that post."
+      redirect_back_or_default(forums_path)
+    end
   end
   def update
     @post = Post.find(params[:id])
@@ -10,6 +14,7 @@ class PostsController < ApplicationController
     flash[:notice] = "Post has been updated."
     redirect_to topic_path(@post.topic,@post.forum)
   end
+  #does this do anything?
   def create
     begin
       @post = Post.create!(params[:post])

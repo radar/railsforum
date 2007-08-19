@@ -1,7 +1,9 @@
 <% form_for :post, @post, :url => post_path(@post), :html => { :method => :put } do |f| %>
 <table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
 <thead><tr><td colspan='2'><h2>Editing a post in: <%= link_to(@post.topic.subject, :controller => "topic", :action => "view", :id=> @post.topic.id) %></h2></td></tr></thead>
+<tr><td><b>Reason for editing:</b></td><td> <%= f.text_field "edit_reason", :size => 40 %></td></tr>
 <%= render :partial => "form", :locals => { :f => f } %>
+<%= f.hidden_field "edited_by_id", :value => current_user.id %>
 <tfoot><tr><td colspan='2'>
 <%= submit_tag "Update" %></td></tr>
 </table>
