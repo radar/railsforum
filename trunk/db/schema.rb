@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 10) do
     t.column "banned_by",                 :integer
     t.column "ban_time",                  :datetime
     t.column "ban_reason",                :string
-    t.column "ban_times",                 :integer
+    t.column "ban_times",                 :integer,                :default => 0
     t.column "location",                  :string
     t.column "description",               :text
     t.column "website",                   :text
