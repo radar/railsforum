@@ -28,13 +28,23 @@ module AuthenticatedSystem
       flash[:ip] = @ips.first
     end
   end
+  
   def ip_banned_redirect
     if ip_banned?
       redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"
     end
   end
+  
   def user_banned?
     logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
+  end
+  
+  #END OF MOVE
+  
+  def active_user
+    if logged_in?
+      current_user.update_attribute("login_time",Time.now)
+    end
   end
   
   def logged_in?
