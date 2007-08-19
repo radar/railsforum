@@ -26,6 +26,8 @@ class TopicsController < ApplicationController
   end
   def reply
     @topic = Topic.find(params[:id])
+    #is there an easier way to do this?
+    @posts = @topic.posts.reverse.last(10)
     @post = Post.find(params[:quote]) if params[:quote]
   end
   def moderate
