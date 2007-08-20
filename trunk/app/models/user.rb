@@ -16,8 +16,8 @@ class User < ActiveRecord::Base
   #has
   has_many :posts
   has_many :topics
-  has_many :inbox_messages, :class_name => "Message", :foreign_key => "to_id", :conditions => "to_read = 0 AND to_deleted = 0"
-  has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
+  has_many :inbox_messages, :class_name => "Message", :foreign_key => "to_id", :conditions => ["to_read = 0 AND to_deleted = 0"]
+#  has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
   has_many :banned_ips, :foreign_key => "banned_by"
   
   #belongs
@@ -29,9 +29,9 @@ class User < ActiveRecord::Base
   
   #after
   
-  #acts@
-  #find out why this isn't working!
-#  acts_as_ferret
+#  acts
+#  find out why this isn't working!
+  acts_as_ferret :fields => [:login]
   
   def make_admin
     self.userlvl = 3 if User.count == 0

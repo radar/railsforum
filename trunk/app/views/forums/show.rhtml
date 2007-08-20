@@ -23,7 +23,7 @@
 <% if logged_in? && !current_user.previous_login.nil? && topic.posts.last.created_at > current_user.previous_login && !topic.locked %>
 <%= image_tag("new.jpg") %>
 <% elsif topic.locked %>
-<%- image_tag("locked.jpg") %>
+<%= image_tag("locked.jpg") %>
 <% else %>
 <%= image_tag("old.jpg") %>
 <% end %>

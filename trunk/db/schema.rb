@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(:version => 11) do
   create_table "forums", :force => true do |t|
     t.column "title",             :string
     t.column "description",       :text
-    t.column "able_to_reply",     :integer, :default => 1
     t.column "is_visible_to",     :integer, :default => 1
     t.column "topics_created_by", :integer, :default => 1
   end
@@ -64,7 +63,7 @@ ActiveRecord::Schema.define(:version => 11) do
     t.column "banned_by",                 :integer
     t.column "ban_time",                  :datetime
     t.column "ban_reason",                :string
-    t.column "ban_times",                 :integer
+    t.column "ban_times",                 :integer,                :default => 0
     t.column "location",                  :string
     t.column "description",               :text
     t.column "website",                   :text

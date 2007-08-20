@@ -15,11 +15,11 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'accounts/user/:login', :controller => 'accounts', :action => 'user'
  # map.connect 'topics/reply/:id/:quote', :controller => 'topics', :action => 'reply'
  map.resources :forums, :collection => { :list => :get } do |forums|
- forums.resources :topics, :collection => { :moderate => :post }, :member => { :reply => :get } do |topics|
+ forums.resources :topics, :collection => { :moderate => :post }, :member => { :reply => :get, :unlock => :get, :lock => :get } do |topics|
   topics.resources :posts
 end
 end
-map.resources :messages, :member => { :sent => :get, :reply => :get }, :collection => { :send_reply => :post }
+map.resources :messages, :member => { :reply => :get }, :collection => { :send_reply => :post, :sent => :get }
 map.resources :posts
 
   map.connect ':controller/:action/:id'

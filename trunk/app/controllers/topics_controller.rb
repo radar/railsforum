@@ -40,9 +40,24 @@ class TopicsController < ApplicationController
       params[:moderated_topics].each { |id| Topic.find(id).update_attribute("locked",false) }
       flash[:notice] = "All selected topics have been unlocked."
     when "Delete"
+    #maybe ask for confirmation?
       params[:moderated_topics].each { |id| Topic.find(id).destroy }
       flash[:notice] = "All selected topics have been deleted."
     end
     redirect_to forum_path(params[:forum_id])
+  end
+  #these two methods do basically the same thing
+  def lock
+    topic = Topic.find(params[:id])
+    topic.update_attribute("locked",true)
+    flash[:notice] = "This topic has been locked."
+    redirect_to topic_path(topic.id)
+  end
+  
+  def unlock
+    topic = Topic.find(params[:id])
+    topic.update_attribute("locked",false)
+    flash[:notice] = "This topic has been unlocked."
+    redirect_to topic_path(topic.id)
   end
 end

@@ -1,0 +1,6 @@
+		<tr>
+			<td align='center'><%= link_to(message.to_read? ? image_tag("old.jpg") : image_tag("new.jpg"), message_path(message.id))%></td>
+			<td align='center'><%= link_to(image_tag("delete.jpg"), message_path(message.id), :method => "delete") %></td>
+			<td align='center'><%= message.from.login %></td>
+			<td align='center'><%= time_ago_in_words(message.created_at) %> ago</td>
+		</tr>

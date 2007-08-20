@@ -3,12 +3,13 @@ class MessagesController < ApplicationController
   before_filter :store_location, :only => [:index, :sent]
   
   def index
-    @messages = Message.find_all_by_to_id_and_to_deleted(current_user.id,1).reverse
+    #should be to_deleted?
+    @messages = Message.find_all_by_to_id_and_to_deleted(current_user.id,false).reverse
   end
   
   def new
     @message = Message.new
-    @users = User.find(:all, :order => "login ASC")
+    @users = User.find(:all, :order => "login ASC").reject! { |u| u.login == current_user.login }
   end
   
   def create
@@ -19,11 +20,10 @@ class MessagesController < ApplicationController
  
   def destroy
 	  #refactor! if if else end if end else end... this can be done so much better.
-    @message = Message.find(:first)
+    @message = Message.find(params[:id])
     if @message.belongs_to_user(current_user.id)
     if @message.from_id == current_user.id
     @message.update_attribute("from_deleted",true)
-    else
     @message.update_attribute("to_deleted",true)
     end
     if @message.from_deleted == @message.to_deleted
@@ -38,7 +38,7 @@ end
   
   def show
 	  @message = Message.find(params[:id])
-	  if @message.belongs_to_user(current_user.id)
+	  if !@message.belongs_to_user(current_user.id)
           flash[:notice] = "That message does not belong to you."
 	 redirect_back_or_default(messages_path)
     elsif @message.to_id == current_user.id
@@ -51,5 +51,9 @@ end
   def reply
 	  @message = Message.find(params[:id])
 	  @users = User.find(:all, :order => "login ASC")
+	end
+  
+  def sent
+        @messages = Message.find_all_by_from_id_and_from_deleted(current_user.id,false).reverse
   end
 end

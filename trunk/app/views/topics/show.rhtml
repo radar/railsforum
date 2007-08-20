@@ -1,10 +1,16 @@
 
 <%= link_to("rForum", forums_path) %> -> <%= link_to(@topic.forum.title, forum_path(@topic.forum.id)) %> ->  <%= @topic.subject %>
 <h2><%= @topic.subject %></h2>
-<%= link_to("New Topic", new_topic_path) %> |
-<% if !@topic.locked || @current_user.administrator? || @current_user.moderator?%>
-<%= link_to("New Reply", reply_topic_path(@topic.forum.id,@topic.id)) %>
-<% else if !@current_user.administrator? || @current_user.moderator?%>Locked!
+<%= link_to("New Topic", new_topic_path) %> 
+<% if !@topic.locked || current_user.admin? %>
+| <%= link_to("New Reply", reply_topic_path(@topic.forum.id,@topic.id)) %>
+<% if is_admin? %>
+|
+<% if @topic.locked? %>
+<%= link_to("Unlock this topic", unlock_topic_path(@topic.id)) %>
+<% else %>
+<%= link_to("Lock this topic", lock_topic_path(@topic.id)) %>
+<% end %>
 <% else %>
 Locked!
 <% end 
