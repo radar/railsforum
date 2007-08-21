@@ -17,12 +17,13 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :topics
   has_many :inbox_messages, :class_name => "Message", :foreign_key => "to_id", :conditions => ["to_read = 0 AND to_deleted = 0"]
-#  has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
   has_many :banned_ips, :foreign_key => "banned_by"
-  
+  #we would define a has_one association here for rank. Unfortunately, this would be defining it for the class, and not for a single user object. This is why we define the "rank" method further down.
+  #but, we might want to do has_one :rank if they have a CUSTOM RANK assigned to them, could come in handy.
+    
   #belongs
   belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
-  
   #before
   before_save :encrypt_password
   before_save :make_admin
@@ -31,8 +32,15 @@ class User < ActiveRecord::Base
   
 #  acts
 #  find out why this isn't working!
-#  acts_as_ferret :fields => [:login]
+  #acts_as_ferret :fields => [:login]
   
+  
+  #misc. user information
+  def rank
+	rank = Rank.find(:first, :conditions => ["posts_required <= ? AND custom = 0",posts.size], :order => "posts_required DESC")
+	rank.nil? ? "User" : rank.name
+  end
+  #permission checking 
   def make_admin
     self.userlvl = 3 if User.count == 0
   end

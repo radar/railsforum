@@ -18,7 +18,12 @@ There are no recent posts.
 <%= link_to "New Forum", new_forum_path %><br>
 <%= link_to "Manage Forums", list_forums_path %>
 </td>
-<td class='admin-section-sub-box' valign='top'><%= link_to("List of Users", :controller => "accounts", :action => "list") %><br>
+<td class='admin-section-sub-box' valign='top'><%= link_to("Manage Users", :controller => "accounts", :action => "list") %><br>
 <%= link_to("Ban IPs", :controller => "accounts", :action => "ban_ip") %>
+</td></tr>
+<tr><td class='admin-section-sub-title' colspan='2'>Ranks</td></tr>
+<tr><td class='admin-section-sub-box' colspan='2'>
+<%= link_to "New Rank", new_rank_path %><br>
+<%= link_to "Manage Ranks", ranks_path %><br>
 </td></tr>
 </table>

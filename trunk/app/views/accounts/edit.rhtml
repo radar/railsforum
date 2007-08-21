@@ -6,8 +6,8 @@
 <tr><td><b>New Password</b></td><td><%= password_field("user","password", :value => "") %></td></tr>
 <tr><td><b>Signature</b></td><td><%= text_area("user","signature", :cols => 80, :rows => 5) %></td></tr>
 <tr><td><b>Email</b></td><td><%= text_field("user","email") %></td></tr>
-<tr><td><b>Administrator</b></td><td><%= check_box("user","administrator") %></td></tr>
-<tr><td><b>Moderator</b></td><td><%= check_box("user","moderator") %></td></tr>
+<tr><td><b>Custom Rank</b></td><td><%= select("user","rank", @ranks.map { |r| [r.name,r.id] }) %>
+<tr><td><b>USER LEVEL</b></td><td>IMPLEMENT THIS</td></tr>
 <tr><td colspan='3'>Ban Options</td>
 <tr><td><b>Ban Time</b></td><td><%= datetime_select("user","ban_time") %></td></tr></tr>
 </tbody>

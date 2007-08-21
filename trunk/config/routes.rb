@@ -21,6 +21,7 @@ end
 end
 map.resources :messages, :member => { :reply => :get }, :collection => { :send_reply => :post, :sent => :get }
 map.resources :posts
+map.resources :ranks
 
   map.connect ':controller/:action/:id'
 end

@@ -1,0 +1,23 @@
+<table cellspacing='0' cellpadding='5' width='100%' class='action-box'>
+<thead>
+<tr>
+<td align='center'>Name</td>
+<td align='center'>Posts Required</td>
+<td align='center'>Custom Rank?</td>
+</tr>
+</thead>
+<tbody>
+<% unless @ranks.empty? %>
+<% for rank in @ranks %>
+<tr>
+<td align='center'><%= rank.name %></td>
+<td align='center'><%= rank.posts_required %></td>
+<td align='center'><%= rank.custom %></td></tr>
+
+<% end %>
+<% else %>
+<tr><td colspan='3' align='center'><b>There are no ranks. <%= link_to "Maybe you should create one.", new_rank_path %></b></td></tr>
+<% end %>
+</tbody>
+
+</table>

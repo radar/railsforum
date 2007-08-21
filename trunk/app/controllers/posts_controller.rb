@@ -7,12 +7,13 @@ class PostsController < ApplicationController
       flash[:notice] = "You do not own that post."
       redirect_back_or_default(forums_path)
     end
+    render :layout => false    
   end
   def update
     @post = Post.find(params[:id])
     @post.update_attributes!(params[:post])
     flash[:notice] = "Post has been updated."
-    redirect_to topic_path(@post.topic,@post.forum)
+    #redirect_to topic_path(@post.topic,@post.forum)
   end
   #does this do anything?
   def create

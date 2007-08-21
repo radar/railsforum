@@ -1,0 +1,9 @@
+<h2>Creating a Rank</h2>
+<% form_for :rank, @rank, :url => ranks_path do |@f| %>
+<table cellspacing='0' cellpadding='5' class='action-box' width='100%'>
+<%= render :partial => "form" %>
+<tfoot>
+<tr><td colspan='2'><%= submit_tag "Create" %></td></tr>
+</tfoot>
+</table>
+<% end %>
