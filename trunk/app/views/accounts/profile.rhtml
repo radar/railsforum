@@ -2,7 +2,7 @@
 <table cellspacing='0' cellpadding='2' class='action-box' width='100%'>
 <thead><tr><td colspan='2'><h2>Editing Your Profile</h2></td></tr></thead>
 <tbody>
-<tr><td valign='top' colspan='2'><h3>New Password</h3></td></tr>
+<tr><td valign='top' colspan='2'><h3>New Password(you dont have to enter a password)</h3></td></tr>
 <tr><td valign='top'><b>New Password</b></td><td> <%= password_field("user","password", :value => "") %></td></tr>
 <tr><td valign='top'><b>New Password Confirmation</b></td><td> <%= password_field("user","password_confirmation", :value => "") %></td></tr>
 <tr><td valign='top'><b>Signature:</b></td><td> <%= text_area("user","signature", :cols => 80, :rows => 5, :value => @user.signature) %></td></tr>

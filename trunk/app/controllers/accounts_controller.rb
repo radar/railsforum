@@ -46,7 +46,7 @@ class AccountsController < ApplicationController
       flash[:notice] = "Password has been changed. Please remember to use this password from now on. Your profile has been updated." unless params[:user][:crypted_password].nil?
       @user.update_attributes(params[:user])
       flash[:notice] ||= "Your profile has been updated."
-    end
+	end
   end
   #maybe move these methods into their own controller, they have nothing to do with users.
   def ban_ip

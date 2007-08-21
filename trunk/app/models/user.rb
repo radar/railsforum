@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   
 #  acts
 #  find out why this isn't working!
-  acts_as_ferret :fields => [:login]
+#  acts_as_ferret :fields => [:login]
   
   def make_admin
     self.userlvl = 3 if User.count == 0
