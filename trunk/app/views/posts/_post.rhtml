@@ -1,9 +1,9 @@
 <table cellspacing='0' cellpadding='5' width='100%' class='posts'>
 <thead>
 <tr><td rowspan='2' valign='top' width='15%'><b><%= post.user.login %></b></td>
-<td valign='top'><%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %></td>
+<td valign='top'>#<%= post_counter + 1 %> - <%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %></td>
 <td align='right' valign='top'>
-	<% if !@topic.locked || current_user.admin? %>
+	<% if !@topic.locked || is_admin? %>
 <%= link_to("Reply", reply_topic_path(@topic.forum.id,@topic.id)) %> |
 <%= link_to("Quote", :controller => "topics", :action => "reply", :id => @topic.id, :quote => post.id) %> 
 <% if is_post_owner_or_admin?(post.id) %>

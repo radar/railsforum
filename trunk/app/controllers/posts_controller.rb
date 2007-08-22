@@ -13,9 +13,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update_attributes!(params[:post])
     flash[:notice] = "Post has been updated."
-    #redirect_to topic_path(@post.topic,@post.forum)
   end
-  #does this do anything?
+  #does this action do anything?
   def create
     begin
       @post = Post.create!(params[:post])
