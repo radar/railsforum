@@ -39,7 +39,7 @@ require 'chronic/time_zone'
 require 'numerizer/numerizer'
 
 module Chronic
-  VERSION = "0.2.3"
+#  VERSION = "0.2.3"
   
   def self.debug; false; end
 end
