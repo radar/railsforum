@@ -1,6 +1,15 @@
 <%= error_messages_for :user %>
-<h2>Signup</h2>
-<% form_for :user do |f| -%>
+<table cellspacing='0' cellpadding='2' class='forums' width='100%' rules='groups'>
+<thead>
+<tr>
+<td align='left' width='40%'><b>Signup</b></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td align='left'>
+	<% form_for :user do |f| -%>
 <p><label for="login">Login</label><br/>
 <%= f.text_field :login %></p>
 
@@ -14,4 +23,11 @@
 <%= f.password_field :password_confirmation %></p>
 
 <p><%= submit_tag 'Sign up' %></p>
+
+	</td>
+</tbody>
+
+<tfoot>
+</tfoot>
+</table>
 <% end -%>
