@@ -26,11 +26,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id]).destroy
     flash[:notice] = "Post was deleted."
     if @post.topic.posts.size.zero?
-      Topic.find(@post.topic.id).destroy
-      flash[:notice] = "Post was deleted. Since post was last in topic, topic was deleted also."
-      redirect_to(forum_path(@post.forum.id))
-    else
-      redirect_to(topic_path(@post.forum.id,@post.topic.id))
-    end
-  end
+	    @post.topic.destroy
+	    	flash[:notice] = "Post was deleted. This was the only post in the topic, so topic was deleted also."
+	end
+	end
 end

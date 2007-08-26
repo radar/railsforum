@@ -4,12 +4,13 @@
 <%= link_to("New Topic", new_topic_path) %> 
 <% if !@topic.locked || is_admin? %>
 | <%= link_to("New Reply", reply_topic_path(@topic.forum.id,@topic.id)) %>
-<% if is_admin? %>
-<% if @topic.locked? %>
 |
-<%= link_to("Unlock this topic", unlock_topic_path(@topic.id)) %>
+<% if is_admin? %>
+<% if @topic.locked? %> 
+<%= link_to("Unlock this topic", unlock_topic_path(@topic.id,@topic.forum.id)) %>
 <% else %>
-<%= link_to("Lock this topic", lock_topic_path(@topic.id)) %>
+
+<%= link_to("Lock this topic", lock_topic_path(@topic.id,@topic.forum.id)) %>
 <% end %>
 <% end %>
 <% else %>
