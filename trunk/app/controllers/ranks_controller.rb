@@ -11,7 +11,7 @@ class RanksController < ApplicationController
 	  flash[:notice] = "#{@rank.name} has been created."
 	  redirect_to ranks_path
 	  rescue Exception => @e
-	  render :template => "new"
+	  render :template => "ranks/new"
   end
 
   def edit

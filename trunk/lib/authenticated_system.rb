@@ -3,14 +3,14 @@ module AuthenticatedSystem
   # Preloads @current_user with the user model if they're logged in.
   
   def is_admin?
-    if logged_in? && current_user.userlvl == 3
+    if logged_in? && current_user.user_level_id == 3
       true
     else
       false
     end
   end
   def is_admin_redirect
-    if logged_in? && current_user.userlvl == 3
+    if logged_in? && current_user.user_level_id == 3
       true
     else
       flash[:notice] = "You need to be an admin to do that."

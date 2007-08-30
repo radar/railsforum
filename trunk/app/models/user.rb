@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   
   #validations
-  validates_presence_of     :login, :email
+  validates_presence_of     :login, :email, :user_level
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
   validates_length_of       :password, :within => 4..40, :if => :password_required?
@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
     
   #belongs
   belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
+  belongs_to :user_level
+  
   #before
   before_save :encrypt_password
   before_save :make_admin

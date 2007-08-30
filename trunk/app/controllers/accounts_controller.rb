@@ -98,11 +98,13 @@ class AccountsController < ApplicationController
   end
   def edit
 	  @user = User.find(params[:id]) 
+	  @userlevels = UserLevel.find(:all)
+	  @ranks = Rank.find_all_by_custom(true)
 	  if request.post?
 		  @user.update_attributes(params[:user])
 		  flash[:notice] = "This user has been updated."
 		  redirect_back_or_default(:controller => "accounts", :action => "list")
 	 end
-	  @ranks = Rank.find_all_by_custom(true)
+	  
 	  end
 end
