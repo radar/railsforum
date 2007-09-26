@@ -16,19 +16,24 @@
 	<td align='right'>Last Post</td>
 	</tr></thead>
 	<tbody>
-	<% for topic in @forum.topics.reverse %>
+	<% for topic in @forum.topics %>
 	<tr>
 	<td><% if is_admin? %><%= check_box_tag "moderated_topics[]", topic.id %><% end %></td>
 <td>
 <% if logged_in? && !current_user.previous_login.nil? && topic.posts.last.created_at > current_user.previous_login && !topic.locked %>
-<%= image_tag("new.jpg") %>
-<% elsif topic.locked %>
-<%= image_tag("locked.jpg") %>
+<%= style_image_tag("new.jpg") %>
+<% elsif topic.locked? %>
+<%= style_image_tag("locked.jpg") %>
+<% elsif topic.sticky? %>
+<%= style_image_tag("sticky.jpg") %>
 <% else %>
-<%= image_tag("old.jpg") %>
+<%= style_image_tag("old.jpg") %>
 <% end %>
 </td>
-<td><b><%= link_to(topic.subject, topic_path(topic.forum.id, topic.id)) %></b></td>
+<td><b>
+  <%= topic.sticky %>
+    <%= topic.sticky == true ? link_to(topic.subject, topic_path(topic.forum.id, topic.id)) : link_to("STICKY: " + topic.subject, topic_path(topic.forum.id, topic.id)) %>
+</b></td>
 <td align='center'><%= topic.posts.size - 1 %></td>
 <td align='center'><%= topic.views %></td>
 <td align='center'><%= link_to(topic.user.login, :controller => "accounts", :action => "user", :id => topic.user.login) %></td>

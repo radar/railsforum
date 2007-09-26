@@ -14,7 +14,6 @@ class PostsController < ApplicationController
     @post.update_attributes!(params[:post])
     flash[:notice] = "Post has been updated."
   end
-  #does this action do anything?
   def create
     begin
       @post = Post.create!(params[:post])

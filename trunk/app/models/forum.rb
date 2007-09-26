@@ -1,7 +1,10 @@
 class Forum < ActiveRecord::Base
-  has_many :topics, :dependent => :destroy
+  acts_as_list
+  has_many :topics, :order => "sticky DESC, created_at DESC", :dependent => :destroy
   has_many :posts, :through => :topics, :source => :posts
+  validates_presence_of :title, :description
   
   def last_post
-	  topics.last.posts.last
-end
+	  topics.empty? ? nil : topics.last.posts.last
+  end
+  end

@@ -1,11 +1,11 @@
 <table cellspacing='0' cellpadding='0' width='100%' class='admin-section'>
-<tr><td class='admin-section-title' align='center' colspan='2'>
-Administration Section</td></tr>
+<tr><td class='admin-section-title' align='center' colspan='2'><b>
+Administration Section</b></td></tr>
 <tr><td class='admin-section-sub-title' width='50%'>Recent Posts</td><td class='admin-section-sub-title'>New Users</td></tr>
 <tr><td class='admin-section-sub-box' valign='top'>
 <% unless @posts.empty? %>
 <% for post in @posts %>
-<%= post.user.login %> posted in <%= link_to post.topic.subject, topic_path(post.topic.forum.id,post.topic.id) + ", " + distance_of_time_in_words(post.created_at,Time.now) %> ago, <i>"<%= truncate(post.text,50) %>"</i><br>
+<%= post.user.login %> posted in <%= link_to post.topic.subject, topic_path(post.topic.forum.id,post.topic.id) %>, <%= time_ago_in_words(post.created_at) %> ago, <i>"<%= truncate(post.text,50) %>"</i><br>
 <% end %>
 <% else %>
 There are no recent posts.
@@ -21,9 +21,15 @@ There are no recent posts.
 <td class='admin-section-sub-box' valign='top'><%= link_to("Manage Users", :controller => "accounts", :action => "list") %><br>
 <%= link_to("Ban IPs", :controller => "accounts", :action => "ban_ip") %>
 </td></tr>
-<tr><td class='admin-section-sub-title' colspan='2'>Ranks</td></tr>
-<tr><td class='admin-section-sub-box' colspan='2'>
+<tr><td class='admin-section-sub-title'>Ranks</td><td class='admin-section-sub-title'>Styles</td></tr>
+<tr><td class='admin-section-sub-box'>
 <%= link_to "New Rank", new_rank_path %><br>
 <%= link_to "Manage Ranks", ranks_path %><br>
-</td></tr>
+</td>
+<td class='admin-section-sub-box'>
+<%= link_to "New Style", new_style_path %><br>
+<%= link_to "Manage Styles", styles_path %><br>
+</td>
+
+</tr>
 </table>

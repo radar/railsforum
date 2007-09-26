@@ -38,6 +38,10 @@ module AuthenticatedSystem
     logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end
   
+  def style
+    logged_in? ? current_user.style : Style.find(:first)
+  end
+  
   def active_user
     if logged_in?
       current_user.update_attribute("login_time",Time.now)
@@ -136,7 +140,7 @@ module AuthenticatedSystem
   # Inclusion hook to make #current_user and #logged_in?
   # available as ActionView helper methods.
   def self.included(base)
-    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?
+    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?, :style
   end
   
   # When called with before_filter :login_from_cookie will check for an :auth_token

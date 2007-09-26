@@ -1,3 +1,5 @@
+<%= link_to "Administration Section", :controller => "admin" %> -> <%= link_to "Ranks", :controller => "ranks" %> -> Editing a Rank
+<h2>Editing a Rank</h2>
 <% form_for :rank, @rank, :url => rank_path(@rank.id), :html => { :method => "put" } do |@f| %>
 <table cellspacing='0' cellpadding='5' width='100%' class='action-box'>
 <%= render :partial => "form" %>

@@ -25,7 +25,7 @@ class RanksController < ApplicationController
 		  redirect_to ranks_path
           else
 		  flash[:notice] = "#{@rank.name} has not been updated."
-		  render :template => "edit"
+		  render :action => "edit"
 	  end
   end
 

@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 13) do
+ActiveRecord::Schema.define(:version => 15) do
 
   create_table "banned_ips", :force => true do |t|
     t.column "ip",        :string
@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.column "description",       :text
     t.column "is_visible_to",     :integer, :default => 1
     t.column "topics_created_by", :integer, :default => 1
+    t.column "position",          :integer
   end
 
   create_table "messages", :force => true do |t|
@@ -45,6 +46,12 @@ ActiveRecord::Schema.define(:version => 13) do
     t.column "custom",         :boolean, :default => false
   end
 
+  create_table "styles", :force => true do |t|
+    t.column "name",       :string
+    t.column "css",        :text
+    t.column "is_default", :boolean, :default => false
+  end
+
   create_table "topics", :force => true do |t|
     t.column "forum_id",   :integer
     t.column "subject",    :string
@@ -52,6 +59,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.column "created_at", :datetime
     t.column "locked",     :boolean
     t.column "views",      :integer
+    t.column "sticky",     :boolean
   end
 
   create_table "user_levels", :force => true do |t|
@@ -79,7 +87,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.column "website",                   :text
     t.column "user_level_id",             :integer
     t.column "rank_id",                   :integer
-    t.column "rank_id",                   :integer
+    t.column "style_id",                  :integer,                :default => 1
   end
 
 end

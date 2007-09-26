@@ -1,5 +1,5 @@
-  <%= error_messages_for 'post' %>
-  <%= error_messages_for 'topic' %>
+  <%= link_to("rForum", forums_path) %> -> <%= link_to @forum.title, forum_path(@forum) %> -> Creating a Topic
+  <%= error_messages_for 'post', 'topic' %>
   <% form_tag :action => "create" do %>
   <table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
   <thead>

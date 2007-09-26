@@ -25,4 +25,9 @@ module ApplicationHelper
     end
     output << "</table>"
   end
+  def style_image_tag(f, html_options={})
+    puts current_user.style.inspect
+    #TODO: Somehow this method is borked!
+	  image_tag current_user.style.name + "/#{f}", html_options 
+  end
 end
