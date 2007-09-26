@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
   has_many :inbox_messages, :class_name => "Message", :foreign_key => "to_id", :conditions => ["to_read = 0 AND to_deleted = 0"]
   has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
   has_many :banned_ips, :foreign_key => "banned_by"
+  
+  has_one :style
   #we would define a has_one association here for rank. Unfortunately, this would be defining it for the class, and not for a single user object. This is why we define the "rank" method further down.
   #but, we might want to do has_one :rank if they have a CUSTOM RANK assigned to them, could come in handy.
     
@@ -33,8 +35,7 @@ class User < ActiveRecord::Base
   
   #after
   
-#  acts
-#  find out why this isn't working!
+#  acts, for later
   #acts_as_ferret :fields => [:login]
   
   

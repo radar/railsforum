@@ -39,7 +39,9 @@ module AuthenticatedSystem
   end
   
   def style
-    logged_in? ? current_user.style : Style.find(:first)
+
+    s = logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
+    s
   end
   
   def active_user

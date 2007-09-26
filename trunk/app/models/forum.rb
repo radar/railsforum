@@ -5,6 +5,6 @@ class Forum < ActiveRecord::Base
   validates_presence_of :title, :description
   
   def last_post
-	  topics.empty? ? nil : topics.last.posts.last
+    topics.empty? ? nil : topics.last.posts.last
   end
-  end
+end
