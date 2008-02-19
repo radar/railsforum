@@ -10,7 +10,7 @@
   <div align='center'>
 <div class='content'>
 <div class='title-bar'>
-<%= link_to style_image_tag "logo.jpg", :class => "logo", :controller => "forums"  %>
+<%= link_to style_image_tag("logo.jpg"), :class => "logo", :controller => "forums"  %>
 </div>
 <div class='flash' id='flash' <%= "style='display:none'" if flash[:notice].blank? %>>
 <%= flash[:notice] %>
