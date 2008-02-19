@@ -1,4 +1,21 @@
-<%= link_to("rForum", forums_path) %> -> <%= @forum.title %>
+<%= link_to("rForum", forums_path) %> <%= breadcrumb(@forum) %>
+  <% unless @forums.empty? %>
+<h2>Subforums for <%= @forum.title %></h2>
+<table cellspacing='0' cellpadding='2' class='forums' width='100%' rules='groups'>
+    <thead>
+      <tr>
+        <td align='left' width='40%'><b>Forum</b></td>
+        <td align='center' width='100px'><b>Topics</b></td>
+        <td align='center' width='100px'><b>Posts</b></td>
+        <td align='right'><b>Last Post</b></td>
+      </tr>
+    </thead>
+<tbody>
+<%= render :partial => "forum", :collection => @forums %>
+</tbody>
+</table>
+<% end %>
+<br>
 <h2>Viewing Forum: <%= @forum.title %></h2>
 <% if can_create_topics? %>
 <%= link_to("New Topic", new_forum_topic_path(@forum)) %>

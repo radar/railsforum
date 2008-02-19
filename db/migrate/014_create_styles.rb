@@ -11,7 +11,6 @@ class CreateStyles < ActiveRecord::Migration
 body, textarea, table {
 font-family:\"Trebuchet MS\",sans;
 font-size:11pt;
-letter-spacing:-1px;
 }
 a {
 color:#48769D;
