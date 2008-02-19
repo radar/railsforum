@@ -7,6 +7,7 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.0.2' unless defined? RAILS_GEM_VERSION
 USERLEVELS = [{:id => 1, :name => "Users"}, {:id => 2, :name => "Moderators" }, {:id => 3, :name => "Administrators" }]
+TIME_DISPLAY = "%d %B %Y %I:%M:%S%P"
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 #require 'ferret'
