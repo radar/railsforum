@@ -1,0 +1,19 @@
+
+<%= link_to("rForum", forums_path) %> -> <%= link_to(@topic.forum.title, forum_path(@topic.forum)) %> ->  <%= @topic.subject %>
+<h2><%= @topic.subject %></h2>
+<%= link_to("New Topic", new_forum_topic_path(@topic.forum)) %> 
+<% if !@topic.locked || is_admin? %>
+  | <%= link_to("New Reply", reply_forum_topic_path(@topic.forum,@topic)) %>
+  |
+  <% if is_admin? %>
+    <% if @topic.locked? %> 
+      <%= link_to("Unlock this topic", unlock_forum_topic_path(@topic.forum,@topic)) %>
+    <% else %>
+      <%= link_to("Lock this topic", lock_forum_topic_path(@topic.forum,@topi)) %>
+    <% end %>
+  <% end %>
+<% else %>
+  Locked!
+<% end %>
+<br>
+<%= render :partial => "posts/post", :collection => @topic.posts %>
