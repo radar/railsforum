@@ -1,8 +1,0 @@
-<% form_for :forum, @forum, :url => forum_path(params[:id]), :html => { :method => "put" } do %>
-<table cellspacing='0' cellpadding='3' class='action-box' width='100%'>
-<%= render :partial => "form" %>
-<tfoot>
-<tr><td colspan='2'><%= submit_tag("Update") %></td></tr>
-</tfoot>
-</table>
-<% end %>
