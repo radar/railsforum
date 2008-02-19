@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>rForum - <%= params[:controller].capitalize %> - <%= params[:action].capitalize %> </title>
+<title>rBoard - <%= params[:controller].capitalize %> - <%= params[:action].capitalize %> </title>
 <style type='text/css'>
   <%= style %>
 </style>
@@ -30,7 +30,8 @@ Logged in as <%= link_to current_user.login, :controller => "accounts", :action 
 <% end %>
 </div>
 <div class='time-now'>
-The time is now <%= Time.now.ordinalize %> </div><br><br>
+
+The time is now <%= Time.now.strftime(time_display) %> </div><br><br>
 <% if user_banned? %>
 <div class='ban-box' align='center'><h1>YOU ARE BANNED</h1><%= current_user.banned_by.login %> banned you and stated "<%= current_user.ban_reason %>" as the reason. Your ban expires in <%= time_ago_in_words(current_user.ban_time) %><br><br></div>
 <% elsif flash[:ip] %>
