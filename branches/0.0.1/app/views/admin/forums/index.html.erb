@@ -1,0 +1,28 @@
+<%= link_to "Administration Section", :controller => "/admin" %> -> Forums
+<h2>Forums</h2>
+<%= link_to "New Forum", new_admin_forum_path %>
+<table cellspacing='0' cellpadding='3' width='100%' class='list-table' rules='groups'>
+<% unless @forums.empty? %>
+  <thead>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Title</td>
+      <td>Is Visible To</td>
+      <td>Creator of Topics</td>
+    </tr>
+  </thead>
+  <tbody>
+      <% for forum in @forums %>
+      <tr>
+        <td class='icon'><%= link_to style_image_tag("edit.jpg"), edit_admin_forum_path(forum.id) %>
+        <%= link_to style_image_tag("delete.jpg"), admin_forum_path(forum.id), :method => "delete", :confirm => "Are you sure you want to delete '#{forum.title}'" %></td>
+        <td><%= forum.title %></td>
+        <td><%= forum.visible_to %></td>
+        <td><%= forum.creator_of_topics %></td>
+      </tr>
+    <% end %>
+  </tbody>
+<% else %>
+  <thead><tr><td colspan='3' align='center'><b>There are no forums. <%= link_to "Maybe you should create a forum.", new_admin_forum_path %></b></td></tr></thead>
+<% end %>
+</table>
