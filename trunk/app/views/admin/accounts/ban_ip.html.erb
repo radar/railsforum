@@ -1,0 +1,31 @@
+<% form_tag do %>
+  <table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+    <thead>
+      <tr><td colspan='2'><h2>Ban an IP</h2></td></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>IP</b></td><td><%= text_field "banned_ip", "ip" %> (accepts * as a wild card match for one octet only)</td></tr>
+      <tr><td><b>Until</b></td><td><%= text_field "banned_ip", "ban_time" %>
+          <%= observe_field("banned_ip_ban_time", :frequency => 0.5, :url => { :controller => "chronic" }, :with => "duration", :update => "date") %>
+          <div id='date'></div>
+      </td></tr>
+      <tr><td><b>Reason</b></td><td><%= text_field "banned_ip", "reason" %></td></tr>
+      <tfoot>
+        <tr><td colspan='2'><%= submit_tag("Ban this range") %></td></tr>
+      </tfoot>
+    </table>
+
+  <table cellspacing='0' cellpadding='2' width='100%' class='action-box'>
+      <tr><td colspan='2'><h2>Banned IPs</h2></td>
+      <tr><td colspan='2'>
+          <% unless @banned.empty? %>
+            <% for ip in @banned %>
+                          <%= ip.ip.gsub("[0-9]{1,3}","*") %> <%= link_to("Remove", :action => "remove_banned_ip", :id => ip.id) %><br>
+                    <% end %>
+                  <% else %>
+            Nobody is banned!
+          <% end %>
+      </td></tr>
+    </tbody>
+  </table>
+<% end %>
