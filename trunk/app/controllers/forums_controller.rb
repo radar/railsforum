@@ -3,7 +3,7 @@ class ForumsController < ApplicationController
   before_filter :is_visible?, :only => [:show]
   
   def index
-    logged_in? ? @forums = Forum.find(:all).select { |forum| forum.is_visible_to <= current_user.user_level_id } : @forums = Forum.find(:all).select { |forum| forum.is_visible_to == 1 }
+    logged_in? ? @forums = Forum.find_all_by_parent_id(nil).select { |forum| forum.is_visible_to <= current_user.user_level_id } : @forums = Forum.find(:all).select { |forum| forum.is_visible_to == 1 }
     #perhaps make this like the good old days (bold, red fonts for administrators and so on)
     @lusers = User.find(:all, :conditions => ['login_time > ?',Time.now-15.minutes]).map { |u| u.login }.to_sentence
     @users = User.count
@@ -14,6 +14,7 @@ class ForumsController < ApplicationController
   
   def show
     @forum = Forum.find(params[:id])
+    @forums = @forum.children
   end
   
   def list

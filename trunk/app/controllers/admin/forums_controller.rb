@@ -2,6 +2,7 @@ class Admin::ForumsController < Admin::ApplicationController
   before_filter :store_location, :except => [:create, :delete, :update]
   def new
     @forum = Forum.new
+    @forums = Forum.find(:all, :order => "title")
   end
   
   def create
@@ -21,6 +22,7 @@ class Admin::ForumsController < Admin::ApplicationController
   
   def edit
     @forum = Forum.find(params[:id])
+    @forums = Forum.find(:all, :order => "title") - [@forum] - @forum.descendants
   end
   
   def update

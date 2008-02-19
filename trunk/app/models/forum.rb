@@ -10,4 +10,11 @@ class Forum < ActiveRecord::Base
   def last_post
     topics.empty? ? nil : topics.last.posts.last
   end
+  
+  def descendants
+    children.map { |f| !f.children.empty? ? f.children + [f]: f }.flatten
+  end
+  
+
+  
 end
