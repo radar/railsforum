@@ -30,6 +30,7 @@
         This user was banned by <%= @user.banned_by.login %> and their ban expires in <%= time_ago_in_words(@user.ban_time) %>.<br><br>
         The reason stated was: <i>"<%= @user.ban_reason %>"</i><br><br>
       <% end %>
+      <%= link_to %>
       <% unless @user.signature.blank? %><br>
         ____________<br>
         <%= bbcode(sanitize(@user.signature)) %>

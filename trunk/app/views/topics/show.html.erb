@@ -4,8 +4,9 @@
 <%= link_to("New Topic", new_forum_topic_path(@topic.forum)) %> 
 <% if !@topic.locked || is_admin? %>
   | <%= link_to("New Reply", reply_forum_topic_path(@topic.forum,@topic)) %>
-  |
+  
   <% if is_admin? %>
+    |
     <% if @topic.locked? %> 
       <%= link_to("Unlock this topic", unlock_forum_topic_path(@topic.forum,@topic)) %>
     <% else %>

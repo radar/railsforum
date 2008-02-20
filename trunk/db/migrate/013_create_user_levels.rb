@@ -7,7 +7,7 @@ class CreateUserLevels < ActiveRecord::Migration
 	UserLevel.create(:name => "Moderator")
 	UserLevel.create(:name => "Administrator")
 	remove_column :users, :userlvl
-  add_column :users, :user_level_id, :default => 1
+  add_column :users, :user_level_id, :integer, :default => 1
   end
 
   def self.down
