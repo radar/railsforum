@@ -16,7 +16,7 @@ class Admin::AccountsController < Admin::ApplicationController
     @banned = BannedIp.find(:all)
   end
   
-    def ban
+  def ban
     @user = User.find(:first)
     if request.post?
       params[:user][:banned_by] = current_user
@@ -47,7 +47,12 @@ class Admin::AccountsController < Admin::ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
-		  flash[:notice] = "This user has been updated."
-		  redirect_back_or_default(admin_accounts_path)
+    flash[:notice] = "This user has been updated."
+    redirect_back_or_default(admin_accounts_path)
+  end
+  
+  def user
+    @user = User.find_by_login(params[:id])
+    @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
   end
 end
