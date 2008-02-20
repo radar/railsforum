@@ -14,6 +14,7 @@ class ForumsController < ApplicationController
   
   def show
     @forum = Forum.find(params[:id])
+    @topics = Topic.paginate :page => params[:page], :per_page => 30, :conditions => "forum_id = #{@forum.id}", :order => "id DESC"
     @forums = @forum.children
   end
   
