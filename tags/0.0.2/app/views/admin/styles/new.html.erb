@@ -1,0 +1,12 @@
+<%= link_to "Administration Panel", :controller => "/admin" %> -> <%= link_to "Styles", :controller => "styles" %> -> New
+<h2>New Style</h2>
+<% form_for @style, :style, :url => admin_styles_path do |@f| %>
+<table class='action-box' width='100%' cellspacing='0' cellpadding='5'>
+  <%= render :partial => "form" %>
+  <tfoot>
+<tr>
+<td colspan='2'><%= submit_tag "Create"%></td>
+</tr>
+</tfoot>
+</table>
+  <% end %>
