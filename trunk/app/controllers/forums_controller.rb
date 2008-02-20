@@ -22,10 +22,13 @@ class ForumsController < ApplicationController
     @forums = Forum.find(:all, :order => "title ASC")
   end
   
-  def destroy
-    @forum = Forum.find(params[:id]).destroy
-    flash[:notice] = "#{@forum.title} has been deleted."
-    redirect_to :controller => "admin", :action => "index"
+  private
+  def is_visible?
+    @forum = Forum.find(params[:id])
+    unless @forum.is_visible_to <= current_user.user_level_id || @forum.is_visible_to == 1
+      flash[:notice] = "You do not have the permissions to access that forum."
+      redirect_to forums_path
+    end
   end
   
 end

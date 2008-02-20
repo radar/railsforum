@@ -38,12 +38,12 @@
 	<tr>
 	<td><% if is_admin? %><%= check_box_tag "moderated_topics[]", topic.id %><% end %></td>
 <td>
-<% if logged_in? && !current_user.previous_login.nil? && topic.posts.last.created_at > current_user.previous_login && !topic.locked %>
+<% if topic.sticky? %>
+<%= style_image_tag("sticky.jpg") %>
+<% elsif logged_in? && !current_user.previous_login.nil? && topic.posts.last.created_at > current_user.previous_login && !topic.locked %>
 <%= style_image_tag("new.jpg") %>
 <% elsif topic.locked? %>
 <%= style_image_tag("locked.jpg") %>
-<% elsif topic.sticky? %>
-<%= style_image_tag("sticky.jpg") %>
 <% else %>
 <%= style_image_tag("old.jpg") %>
 <% end %>

@@ -10,11 +10,16 @@ module AuthenticatedSystem
   def is_admin?
     logged_in? && current_user.user_level_id == 3
   end
+  
   def is_admin_redirect
     if !is_admin?
       flash[:notice] = "You need to be an admin to do that."
       redirect_to :controller => "/accounts", :action => "login"
     end
+  end
+  
+  def is_post_owner_or_admin?(post_id)
+    logged_in? && (Post.find(post_id).user == current_user || current_user.admin?)
   end
   
   def ip_banned?
@@ -37,7 +42,7 @@ module AuthenticatedSystem
   end
   
   def style
-   logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
+    logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
   end
   
   def active_user
