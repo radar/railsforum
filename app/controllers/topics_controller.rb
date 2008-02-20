@@ -16,7 +16,7 @@ class TopicsController < ApplicationController
     flash[:notice] = "Topic has been created."
     redirect_to forum_topic_path(@topic.forum.id,@topic.id)
     #example of a "proper" rescue
-    rescue ActiveRecord::RecordNotSaved, ActiveRecord::RecordInvalid => @e
+  rescue ActiveRecord::RecordNotSaved, ActiveRecord::RecordInvalid => @e
     flash[:notice] = "Topic was not created."
     @forum = Forum.find(params[:forum_id])
     render :template => "topics/new"
@@ -40,9 +40,14 @@ class TopicsController < ApplicationController
       params[:moderated_topics].each { |id| Topic.find(id).update_attribute("locked",false) }
       flash[:notice] = "All selected topics have been unlocked."
     when "Delete"
-    #maybe ask for confirmation?
+      #TODO: maybe ask for confirmation?
       params[:moderated_topics].each { |id| Topic.find(id).destroy }
       flash[:notice] = "All selected topics have been deleted."
+    when "Sticky"
+      params[:moderated_topics].each { |id| Topic.find(id).update_attribute("sticky",true) }
+    when "Unsticky"
+      params[:moderated_topics].each { |id| Topic.find(id).update_attribute("sticky",false) }
+      
     end
     redirect_to forum_path(params[:forum_id])
   end
