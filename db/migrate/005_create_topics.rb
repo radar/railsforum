@@ -5,7 +5,7 @@ class CreateTopics < ActiveRecord::Migration
       t.column "subject", :string
       t.column "user_id", :integer
       t.column "created_at", :datetime
-      t.column "locked", :boolean, :default => false
+      t.column "locked", :boolean
       t.column "views", :integer
     end
   end

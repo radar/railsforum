@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>rBoard - <%= params[:controller].capitalize %> - <%= params[:action].capitalize %> </title>
+<title>rForum - <%= params[:controller].capitalize %> - <%= params[:action].capitalize %> </title>
 <style type='text/css'>
   <%= style %>
 </style>
@@ -10,7 +10,7 @@
   <div align='center'>
 <div class='content'>
 <div class='title-bar'>
-<%= link_to style_image_tag("logo.jpg"), :class => "logo", :controller => "forums"  %>
+<%= link_to style_image_tag "logo.jpg", :class => "logo", :controller => "forums"  %>
 </div>
 <div class='flash' id='flash' <%= "style='display:none'" if flash[:notice].blank? %>>
 <%= flash[:notice] %>
@@ -23,15 +23,14 @@
 <a href='/accounts/signup'>Signup</a>
 <% else %>
 Logged in as <%= link_to current_user.login, :controller => "accounts", :action => "user", :id => current_user.login %> |
- <%= link_to("Profile", :controller => "/accounts", :action => "profile") %> |
- <%= link_to("Member List", :controller => "/accounts", :action => "index") %> |
+ <%= link_to("Profile", :controller => "accounts", :action => "profile") %> |
+ <%= link_to("Member List", :controller => "accounts", :action => "index") %> |
  <%= link_to(pluralize(@current_user.inbox_messages.size,"new message"), messages_path) %> |
- <%= link_to("Logout", :controller => "/accounts", :action => "logout")  %>
+ <%= link_to("Logout", :controller => "accounts", :action => "logout")  %>
 <% end %>
 </div>
 <div class='time-now'>
-
-The time is now <%= Time.now.strftime(time_display) %> </div><br><br>
+The time is now <%= Time.now.ordinalize %> </div><br><br>
 <% if user_banned? %>
 <div class='ban-box' align='center'><h1>YOU ARE BANNED</h1><%= current_user.banned_by.login %> banned you and stated "<%= current_user.ban_reason %>" as the reason. Your ban expires in <%= time_ago_in_words(current_user.ban_time) %><br><br></div>
 <% elsif flash[:ip] %>

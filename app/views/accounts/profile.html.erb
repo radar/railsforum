@@ -7,8 +7,6 @@
       <tr><td valign='top'><b>New Password Confirmation</b></td><td> <%= password_field("user","password_confirmation", :value => "") %></td></tr>
       <tr><td valign='top'><b>Signature:</b></td><td> <%= text_area("user","signature", :cols => 80, :rows => 5, :value => @user.signature) %></td></tr>
       <tr><td valign='top'><b>Email:</b></td><td><%= text_field("user", "email") %></td></tr>
-      <tr><td valign='top'><b>Time Display:</b></td><td><%= text_field("user", "time_display") %> <%= link_to "read this for more information", "http://noobkit.com/show/ruby/ruby/ruby-core/time/strftime.html" %></td></tr>
-      <tr><td valign='top'><b>Example Time Display</b></td><td><%= Time.now.strftime(@user.time_display) %></td></tr>
       <% if @user.email %>
         <tr><td valign='top'>
           <b>Current <a href='http://gravatar.com/'>Gravatar</a></b></td><td>

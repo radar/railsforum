@@ -3,7 +3,10 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'spec/rails'
- (Dir.entries('spec/test_helpers') - [".","..",".svn"]).each { |file| require "spec/test_helpers/" << file } 
+for file in Dir.entries('spec/test_helpers') - [".","..", /$\.(.*)/]
+  puts file
+  require "spec/test_helpers/" << file
+end
 
 Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true

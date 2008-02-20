@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     begin
       @post = Post.create!(params[:post])
       flash[:notice] = "Post has been created."
-      redirect_to forum_topic_path(@post.forum.id,@post.topic.id)
+      redirect_to topic_path(@post.forum.id,@post.topic.id)
     end
   end
   def destroy

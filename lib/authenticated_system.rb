@@ -2,24 +2,14 @@ module AuthenticatedSystem
   # Returns true or false if the user is logged in.
   # Preloads @current_user with the user model if they're logged in.
   
-  #how the user has selected they want to display the time
-  def time_display
-    logged_in? ? current_user.time_display : TIME_DISPLAY
-  end
-  
   def is_admin?
     logged_in? && current_user.user_level_id == 3
   end
-  
   def is_admin_redirect
     if !is_admin?
       flash[:notice] = "You need to be an admin to do that."
       redirect_to :controller => "/accounts", :action => "login"
     end
-  end
-  
-  def is_post_owner_or_admin?(post_id)
-    logged_in? && (Post.find(post_id).user == current_user || current_user.admin?)
   end
   
   def ip_banned?
@@ -42,7 +32,7 @@ module AuthenticatedSystem
   end
   
   def style
-    logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
+   logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
   end
   
   def active_user
@@ -143,7 +133,7 @@ module AuthenticatedSystem
   # Inclusion hook to make #current_user and #logged_in?
   # available as ActionView helper methods.
   def self.included(base)
-    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?, :style, :time_display
+    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?, :style
   end
   
   # When called with before_filter :login_from_cookie will check for an :auth_token

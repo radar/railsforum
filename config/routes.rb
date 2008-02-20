@@ -34,10 +34,5 @@ end
 map.resources :messages, :member => { :reply => :get }, :collection => { :send_reply => :post, :sent => :get }
 map.resources :posts
 
-  #FIXME
   map.connect ':controller/:action/:id'
-    
-  map.connect 'accounts/:page', :controller => "accounts", :action => "index"
-  map.connect 'forums/:id/:page', :controller => "forums", :action => "show"
-  
 end

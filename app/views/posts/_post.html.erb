@@ -1,7 +1,7 @@
 <table cellspacing='0' cellpadding='5' width='100%' class='posts' id='post_<%= post.id %>'>
 <thead>
 <tr><td rowspan='2' valign='top' width='15%'><b><%= post.user.login %></b></td>
-<td valign='top'>#<%= post_counter + 1 %> - <%= post.created_at.strftime(time_display) %></td>
+<td valign='top'>#<%= post_counter + 1 %> - <%= post.created_at.strftime("%d-%m-%y %H:%M:%S") %></td>
 <td align='right' valign='top'>
 	<% if !@topic.locked || is_admin? %>
 <%= link_to("Reply", reply_forum_topic_path(@topic.forum.id,@topic.id)) %> |

@@ -1,9 +1,8 @@
 class AccountsController < ApplicationController
-  before_filter :store_location, :only => [:profile, :index]
-  before_filter :login_required, :only => [:profile, :index]
+  before_filter :store_location, :only => [:profile, :list]
   
   def index
-    @users = User.paginate :page => params[:page], :per_page => 30, :order => "login ASC"
+    @users = User.find(:all, :order => "login ASC")
   end
   
   def login
@@ -40,7 +39,7 @@ class AccountsController < ApplicationController
     cookies.delete :auth_token
     reset_session
     flash[:notice] = "You have been logged out."
-    redirect_to(forums_path)
+    redirect_back_or_default(forums_path)
   end
   
   def profile

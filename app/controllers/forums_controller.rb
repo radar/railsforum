@@ -3,7 +3,7 @@ class ForumsController < ApplicationController
   before_filter :is_visible?, :only => [:show]
   
   def index
-    logged_in? ? @forums = Forum.find_all_without_parent.select { |forum| forum.is_visible_to <= current_user.user_level_id } : @forums = Forum.find_all_without_parent.select { |forum| forum.is_visible_to == 1 }
+    logged_in? ? @forums = Forum.find_all_by_parent_id(nil).select { |forum| forum.is_visible_to <= current_user.user_level_id } : @forums = Forum.find(:all).select { |forum| forum.is_visible_to == 1 }
     #perhaps make this like the good old days (bold, red fonts for administrators and so on)
     @lusers = User.find(:all, :conditions => ['login_time > ?',Time.now-15.minutes]).map { |u| u.login }.to_sentence
     @users = User.count
@@ -14,7 +14,6 @@ class ForumsController < ApplicationController
   
   def show
     @forum = Forum.find(params[:id])
-    @topics = Topic.paginate :page => params[:page], :per_page => 30, :conditions => "forum_id = #{@forum.id}", :order => "sticky DESC, id DESC"
     @forums = @forum.children
   end
   
@@ -22,13 +21,10 @@ class ForumsController < ApplicationController
     @forums = Forum.find(:all, :order => "title ASC")
   end
   
-  private
-  def is_visible?
-    @forum = Forum.find(params[:id])
-    unless @forum.is_visible_to <= current_user.user_level_id || @forum.is_visible_to == 1
-      flash[:notice] = "You do not have the permissions to access that forum."
-      redirect_to forums_path
-    end
+  def destroy
+    @forum = Forum.find(params[:id]).destroy
+    flash[:notice] = "#{@forum.title} has been deleted."
+    redirect_to :controller => "admin", :action => "index"
   end
   
 end

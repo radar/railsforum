@@ -1,7 +1,7 @@
 class ForumListAndTopicSticky < ActiveRecord::Migration
   def self.up
     add_column :forums, :position, :integer
-    add_column :topics, :sticky, :boolean, :default => false
+    add_column :topics, :sticky, :boolean
   end
 
   def self.down
