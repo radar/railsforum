@@ -5,7 +5,6 @@
 class ApplicationController < ActionController::Base
   session :session_key => '_forum_session_id'
   include AuthenticatedSystem
-  include PermissionChecks
   require 'chronic'
   require 'custom_methods'
   before_filter :login_from_cookie

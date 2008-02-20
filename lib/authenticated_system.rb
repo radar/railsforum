@@ -32,9 +32,7 @@ module AuthenticatedSystem
   end
   
   def ip_banned_redirect
-    if ip_banned?
-      redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"
-    end
+      redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"  if ip_banned?
   end
   
   def user_banned?
@@ -46,9 +44,7 @@ module AuthenticatedSystem
   end
   
   def active_user
-    if logged_in?
-      current_user.update_attribute("login_time",Time.now)
-    end
+      current_user.update_attribute("login_time",Time.now) if logged_in?
   end
   
   def logged_in?
@@ -64,22 +60,6 @@ module AuthenticatedSystem
   def current_user=(new_user)
     session[:user] = (new_user.nil? || new_user.is_a?(Symbol)) ? nil : new_user.id
     @current_user = new_user
-  end
-  
-  # Check if the user is authorized.
-  #
-  # Override this method in your controllers if you want to restrict access
-  # to only a few actions or if you want to check if the user
-  # has the correct rights.
-  #
-  # Example:
-  #
-  #  # only allow nonbobs
-  #  def authorize?
-  #    current_user.login != "bob"
-  #  end
-  def authorized?
-    true
   end
   
   # Filter method to enforce a login requirement.
@@ -102,32 +82,6 @@ module AuthenticatedSystem
     logged_in? && authorized? ? true : access_denied
   end
   
-  # Redirect as appropriate when an access request fails.
-  #
-  # The default action is to redirect to the login screen.
-  #
-  # Override this method in your controllers if you want to have special
-  # behavior in case the user is not authorized
-  # to access the requested action.  For example, a popup window might
-  # simply close itself.
-  def access_denied
-    respond_to do |accepts|
-      accepts.html do
-        store_location
-        flash[:notice] = "You need to be logged in to do that."
-        redirect_to :controller => 'accounts', :action => 'login'
-      end
-      accepts.xml do
-        headers["Status"]           = "Unauthorized"
-        headers["WWW-Authenticate"] = %(Basic realm="Web Password")
-        render :text => "Could't authenticate you", :status => '401 Unauthorized'
-      end
-    end
-    false
-  end  
-  
-  # Store the URI of the current request in the session.
-  #
   # We can return to this location by calling #redirect_back_or_default.
   def store_location
     session[:return_to] = request.request_uri
@@ -159,12 +113,12 @@ module AuthenticatedSystem
     end
   end
   
-  private
-  @@http_auth_headers = %w(X-HTTP_AUTHORIZATION HTTP_AUTHORIZATION Authorization)
-  # gets BASIC auth info
-  def get_auth_data
-    auth_key  = @@http_auth_headers.detect { |h| request.env.has_key?(h) }
-    auth_data = request.env[auth_key].to_s.split unless auth_key.blank?
-    return auth_data && auth_data[0] == 'Basic' ? Base64.decode64(auth_data[1]).split(':')[0..1] : [nil, nil] 
-  end
+#  private
+#  @@http_auth_headers = %w(X-HTTP_AUTHORIZATION HTTP_AUTHORIZATION Authorization)
+#  # gets BASIC auth info
+#  def get_auth_data
+#    auth_key  = @@http_auth_headers.detect { |h| request.env.has_key?(h) }
+#    auth_data = request.env[auth_key].to_s.split unless auth_key.blank?
+#    return auth_data && auth_data[0] == 'Basic' ? Base64.decode64(auth_data[1]).split(':')[0..1] : [nil, nil] 
+#  end
 end
