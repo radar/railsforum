@@ -14,8 +14,8 @@
 <% unless @ranks.empty? %>
 <% for rank in @ranks %>
 <tr>
-<td class='icon'><%= link_to(style_image_tag("edit.jpg"), edit_admin_rank_path(rank)) %>
-<%= link_to(style_image_tag("delete.jpg"), admin_rank_path(rank), :method => "delete", :confirm => "Are you sure you want to delete this rank?") %></td>
+<td class='icon'><%= link_to(theme_image_tag("edit.jpg"), edit_admin_rank_path(rank)) %>
+<%= link_to(theme_image_tag("delete.jpg"), admin_rank_path(rank), :method => "delete", :confirm => "Are you sure you want to delete this rank?") %></td>
 <td><%= rank.name %></td>
 <td><%= rank.posts_required.nil? ? "None" : rank.posts_required %></td>
 <td><%= rank.custom ? "Yes" : "No" %></td></tr>

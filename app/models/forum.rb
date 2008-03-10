@@ -1,5 +1,5 @@
 class Forum < ActiveRecord::Base
-  acts_as_list :scope => "parent_id"
+  acts_as_list :scope => :parent_id
   acts_as_tree
   has_many :topics, :order => "created_at DESC", :dependent => :destroy
   has_many :posts, :through => :topics, :source => :posts

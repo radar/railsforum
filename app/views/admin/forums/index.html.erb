@@ -9,17 +9,14 @@
       <td>Title</td>
       <td>Is Visible To</td>
       <td>Creator of Topics</td>
+      <td>Topics</td>
+      <td>Posts</td>
+      <td>Position</td>
     </tr>
   </thead>
   <tbody>
       <% for forum in @forums %>
-      <tr>
-        <td class='icon'><%= link_to style_image_tag("edit.jpg"), edit_admin_forum_path(forum.id) %>
-        <%= link_to style_image_tag("delete.jpg"), admin_forum_path(forum.id), :method => "delete", :confirm => "Are you sure you want to delete '#{forum.title}'" %></td>
-        <td><%= forum.title %></td>
-        <td><%= forum.visible_to %></td>
-        <td><%= forum.creator_of_topics %></td>
-      </tr>
+      <%= render :partial => "forum", :collection => @forums, :locals => { :depth => 0, :extender => false } %>
     <% end %>
   </tbody>
 <% else %>

@@ -1,27 +1,25 @@
 class TopicsController < ApplicationController
   before_filter :login_required, :except => [:show]
+  before_filter :find_forum
   before_filter :is_viewable?, :only => [:show]
-  before_filter :can_create_topics?, :only => [:new, :create]
+  before_filter :create_topic_redirect, :only => [:new, :create]
   before_filter :store_location, :only => [:view, :new, :edit, :reply]
-  #rescuing needed.
   
   def new
-    @forum = Forum.find(params[:forum_id])
+    @topic = Topic.new
   end
   
   def create
     Topic.transaction do
-      @topic = Topic.new(params[:topic].merge(:user_id => current_user.id, :forum_id => params[:forum_id]))
-      @post = @topic.posts.build(params[:post].merge!(:user_id => current_user.id))
+      @topic = current_user.topics.create(params[:topic].merge(:forum_id => params[:forum_id]))
+      @post = @topic.posts.create(params[:post].merge(:user_id => current_user.id ))
+      #FIXME: Have to do this because counter_cache is so truly pathetic:
       @topic.sticky = true if params[:topic][:sticky] == 1
-      @topic.save!
     end
     flash[:notice] = "Topic has been created."
     redirect_to forum_topic_path(@topic.forum.id,@topic.id)
-    #example of a "proper" rescue
   rescue ActiveRecord::RecordNotSaved, ActiveRecord::RecordInvalid => @e
     flash[:notice] = "Topic was not created."
-    @forum = Forum.find(params[:forum_id])
     render :template => "topics/new"
   end
   
@@ -74,20 +72,28 @@ class TopicsController < ApplicationController
 
   private
   
+  def can_reply?
+    true
+  end
+  
   def is_viewable?
     @topic = Topic.find(params[:id])
-    unless (logged_in? && @topic.forum.is_visible_to <= current_user.user_level_id) || @topic.forum.is_visible_to = 1
+    unless (logged_in? && @topic.forum.is_visible_to < current_user.user_level_id) || @topic.forum.is_visible_to == 1
       flash[:notice] = "You do not have the permissions to access that topic."
-      redirect_to forums_path
+      redirect_back_or_default(forums_path)
     end
   end
   
-  def can_create_topics?
-    forum = Forum.find(params[:forum_id])
-    unless forum.topics_created_by <= current_user.user_level_id
-      flash[:notice] = "You cannot create a topic in this forum."
-      redirect_back_or_default(forum_path(forum))
+  def create_topic_redirect
+    @forum = Forum.find(params[:forum_id])
+    if current_user.user_level_id < @forum.topics_created_by
+      flash[:notice] = "You do not have permissions to create topics in this forum."
+      redirect_back_or_default(forums_path)
     end
   end
- 
+  
+  def find_forum
+    @forum = Forum.find(params[:forum_id])
+  end
+  
 end
