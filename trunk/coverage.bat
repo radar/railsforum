@@ -1,0 +1,1 @@
+rcov spec/**/*.rb --rails --exclude lib/custom_methods.rb,lib/authenticated_system.rb
