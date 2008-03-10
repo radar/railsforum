@@ -1,19 +1,23 @@
 class Admin::AccountsController < Admin::ApplicationController
+  before_filter :store_location, :only => [:index]
   
   def ban_ip
     if request.post?
-      if params[:banned_ip][:ip].nil?
-        flash[:notice] = "You must specify an IP to ban."
-        redirect_to :action => "ban_ip"
-      end
-      
       params[:banned_ip][:ban_time] = Chronic.parse(params[:banned_ip][:ban_time])
       params[:banned_ip][:ip].gsub!(".","\.").gsub("*","[0-9]{1,3}")
       params[:banned_ip][:banned_by] = session[:user]
-      BannedIp.create(params[:banned_ip])
-      flash[:notice] = "The IP range has been banned."
+      @banned_ip = BannedIp.new(params[:banned_ip])
+      if @banned_ip.save
+        flash[:notice] = "The IP range has been banned."
+      else
+        flash[:notice] = "The IP range could not be banned."
+      end
+    
+    else
+      @banned_ip = BannedIp.new(params[:banned_ip])
     end
-    @banned = BannedIp.find(:all)
+
+    @banned = BannedIp.find(:all, :conditions => ["ban_time > ?",Time.now])
   end
   
   def ban

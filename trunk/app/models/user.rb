@@ -20,10 +20,8 @@ class User < ActiveRecord::Base
   has_many :sent_messages, :class_name => "Message", :foreign_key => "from_id"
   has_many :banned_ips, :foreign_key => "banned_by"
   
-  has_one :style
-  #we would define a has_one association here for rank. Unfortunately, this would be defining it for the class, and not for a single user object. This is why we define the "rank" method further down.
-  #but, we might want to do has_one :rank if they have a CUSTOM RANK assigned to them, could come in handy.
-    
+  has_one :theme
+  
   #belongs
   belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"
   belongs_to :user_level
@@ -35,15 +33,12 @@ class User < ActiveRecord::Base
   
   #after
   
-#  acts, for later
-  #acts_as_ferret :fields => [:login]
-  
-  
   #misc. user information
   def rank
 	rank = Rank.find(:first, :conditions => ["posts_required <= ? AND custom = 0",posts.size], :order => "posts_required DESC")
 	rank.nil? ? "User" : rank.name
   end
+  
   #permission checking 
   def make_admin
     self.user_level = UserLevel.find_by_name("Administrator") if User.count == 0

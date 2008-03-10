@@ -25,11 +25,14 @@ module ApplicationHelper
     end
     output << "</table>"
   end
-  def style_image_tag(f, html_options={})
-    if !style.nil?
-      image_tag style.name + "/#{f}", html_options 
+  def theme_image_tag(f, html_options={})
+    if !theme.nil?
+      o = "<img src='#{ActionController::AbstractRequest.relative_url_root}/themes/" + theme.name + "/#{f}'"
+      html_options.each { |option| o << "#{option.first}='#{option.last}'"}
+      o << " />"
     else
       image_tag "/#{f}", html_options 
     end
+    
   end
 end

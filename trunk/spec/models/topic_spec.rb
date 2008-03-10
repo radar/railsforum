@@ -1,29 +1,28 @@
 require File.dirname(__FILE__) + '/../spec_helper'
-include ForumSetup
 describe Topic, "creation" do
+  fixtures :topics
   before do
-    empty_tables
-    setup_forum
+    @topic = topics(:invalid)
   end
-  it "should validate the length of the subject" do
-    @topic_1.subject = "Srt"
-    @topic_1.save.should be_false
-    @topic_1.errors_on(:subject).should_not be_empty
-  end
-  it "should validate the presence of subject" do
-    @topic_1.subject = nil
-    @topic_1.save.should be_false
-    @topic_1.errors_on(:subject).should_not be_empty
-  end
-  it "should validate the presence of a forum_id" do
-    @topic_1.forum_id = nil
-    @topic_1.save.should be_false
-    @topic_1.errors_on(:forum_id).should_not be_empty
-  end
-  it "should validate the presence of a user_id" do
-    @topic_1.user_id = nil
-    @topic_1.save.should be_false
-    @topic_1.errors_on(:user_id).should_not be_empty
+  it "should validate everything" do
+    #length of subject
+    @topic.subject = "Srt"
+    @topic.save.should be_false
+    @topic.errors_on(:subject).should_not be_empty
+    
+    #presence of subject
+    @topic.subject = nil
+    @topic.save.should be_false
+    @topic.errors_on(:subject).should_not be_empty
+    
+    #presence of forum_id
+    @topic.save.should be_false
+    @topic.errors_on(:forum_id).should_not be_empty
+    
+    #presence of user_id
+    
+    @topic.save.should be_false
+    @toppic.errors_on(:user_id).should_not be_empty
   end
   
 

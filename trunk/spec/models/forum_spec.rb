@@ -1,17 +1,16 @@
 require File.dirname(__FILE__) + '/../spec_helper'
-include ForumSetup
 describe Forum, "creation" do
+  fixtures :forums
   before(:each) do
-    empty_tables
-    setup_forum
-    @forum = Forum.new
+    @forum = forums(:invalid)
   end
 
-  it "should validate the presence of a title" do
+  it "validation checks" do
+    #title cannot be empty
     @forum.save.should be_false
     @forum.errors_on(:title).should_not be_empty
-  end
-  it "should validate the presence of a description" do
+    
+    #description cannot be empty
     @forum.save.should be_false
     @forum.errors_on(:description).should_not be_empty
   end
@@ -19,15 +18,23 @@ describe Forum, "creation" do
 end
 
 describe Forum, "in general" do
+  fixtures :forums, :topics, :posts
   before do
-    empty_tables
-    setup_forum
-    @post = mock("post")
+    @forum = forums(:everybody)
+    @empty_forum = forums(:sub_of_everybody)
   end
   it "should be able to find the last post" do
-    @forum_1.last_post.should_not be_nil
+    @forum.last_post.should_not be_nil
   end
   it "should not be able to find the last post" do
-    @forum_2.last_post.should be_nil
+    @empty_forum.last_post.should be_nil
+  end
+  it "should be able to find all descendants of a topic" do
+    @forum.descendants.should eql([forums(:sub_of_everybody)])
+  end
+  
+  it "should be able to find all the root forums" do
+    @root_forums = Forum.find_all_without_parent
+    @root_forums.size.should eql(4)
   end
 end

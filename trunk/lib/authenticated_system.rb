@@ -14,7 +14,7 @@ module AuthenticatedSystem
   def is_admin_redirect
     if !is_admin?
       flash[:notice] = "You need to be an admin to do that."
-      redirect_to :controller => "/accounts", :action => "login"
+      redirect_back_or_default(:controller => "/accounts", :action => "login")
     end
   end
   
@@ -32,19 +32,19 @@ module AuthenticatedSystem
   end
   
   def ip_banned_redirect
-      redirect_to :controller => "accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"  if ip_banned?
+    redirect_to :controller => "/accounts", :action => "ip_is_banned" unless params[:action] == "ip_is_banned"  if ip_banned?
   end
   
   def user_banned?
     logged_in? ? !current_user.ban_time.nil? && @current_user.ban_time > Time.now : false
   end
   
-  def style
-    logged_in? && !current_user.style.nil? ? current_user.style : Style.find(:first)
+  def theme
+    logged_in? ? Theme.find(:first) : Theme.find(:first)
   end
   
   def active_user
-      current_user.update_attribute("login_time",Time.now) if logged_in?
+    current_user.update_attribute("login_time",Time.now) if logged_in?
   end
   
   def logged_in?
@@ -60,6 +60,18 @@ module AuthenticatedSystem
   def current_user=(new_user)
     session[:user] = (new_user.nil? || new_user.is_a?(Symbol)) ? nil : new_user.id
     @current_user = new_user
+  end
+  
+  def can_create_topics?
+    forum = Forum.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    forum = Forum.find(params[:forum_id])
+  ensure
+    (logged_in? && forum.topics_created_by <= current_user.user_level_id) || forum.topics_created_by == 1
+  end
+  
+  def is_owner_or_admin?(id)
+    logged_in? && (current_user.user_level == UserLevel.find_by_name("Administrator") || Post.find(id).user == current_user)
   end
   
   # Filter method to enforce a login requirement.
@@ -79,8 +91,12 @@ module AuthenticatedSystem
   def login_required
     username, passwd = get_auth_data
     self.current_user ||= User.authenticate(username, passwd) || :false if username && passwd
-    logged_in? && authorized? ? true : access_denied
+    if !logged_in?
+      flash[:notice] = "You must be logged in to do that."
+      redirect_to(:controller => "accounts", :action => "login")
+    end
   end
+  
   
   # We can return to this location by calling #redirect_back_or_default.
   def store_location
@@ -97,7 +113,7 @@ module AuthenticatedSystem
   # Inclusion hook to make #current_user and #logged_in?
   # available as ActionView helper methods.
   def self.included(base)
-    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?, :style, :time_display
+    base.send :helper_method, :current_user, :logged_in?, :is_admin?, :ip_banned?, :user_banned?, :theme, :time_display, :can_create_topics?, :is_owner_or_admin?, :can_reply?
   end
   
   # When called with before_filter :login_from_cookie will check for an :auth_token
@@ -113,16 +129,13 @@ module AuthenticatedSystem
     end
   end
   
-#  private
+  private
   @@http_auth_headers = %w(X-HTTP_AUTHORIZATION HTTP_AUTHORIZATION Authorization)
-# gets BASIC auth info
+  # gets BASIC auth info
   def get_auth_data
     auth_key  = @@http_auth_headers.detect { |h| request.env.has_key?(h) }
-   auth_data = request.env[auth_key].to_s.split unless auth_key.blank?
-   return auth_data && auth_data[0] == 'Basic' ? Base64.decode64(auth_data[1]).split(':')[0..1] : [nil, nil] 
- end
- 
-  def authorized?
-    authorized = true 
+    auth_data = request.env[auth_key].to_s.split unless auth_key.blank?
+    return auth_data && auth_data[0] == 'Basic' ? Base64.decode64(auth_data[1]).split(':')[0..1] : [nil, nil] 
   end
+ 
 end

@@ -7,13 +7,17 @@ class AccountsController < ApplicationController
   end
   
   def login
+    if logged_in?
+      flash[:notice] = "You are already logged in."
+      redirect_back_or_default(forums_path) 
+    end
     return unless request.post?
     self.current_user = User.authenticate(params[:login], params[:password])
     if logged_in?
       current_user.update_attribute("previous_login",current_user.login_time)
       current_user.update_attribute("login_time",Time.now)
       current_user.update_attribute("ip",request.remote_addr)
-      if params[:remember_me] == 1
+      if params[:remember_me] == "1"
         self.current_user.remember_me
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
@@ -25,17 +29,23 @@ class AccountsController < ApplicationController
   end
   
   def signup
+    if logged_in?
+      flash[:notice] = "You are already logged in. You cannot signup again."
+      redirect_back_or_default(forums_path)
+    end
     @user = User.new(params[:user])
     return unless request.post?
     @user.save!
     self.current_user = @user
     redirect_back_or_default(forums_path)
     flash[:notice] = "Thanks for signing up!"
-    rescue ActiveRecord::RecordInvalid
+  rescue ActiveRecord::RecordNotSaved
+    flash[:notice] = "There was a problem during signup."
     render :action => 'signup'
   end
   
   def logout
+    redirect_to('login') and return false unless logged_in?
     self.current_user.forget_me if logged_in?
     cookies.delete :auth_token
     reset_session
@@ -44,22 +54,29 @@ class AccountsController < ApplicationController
   end
   
   def profile
-    @user = current_user
     if request.post?
-      params[:user][:crypted_password] = @user.encrypt(params[:user][:password])  if params[:user][:password] == params[:user][:password_confirmation] && !params[:user][:password].blank? 
+      params[:user][:crypted_password] = current_user.encrypt(params[:user][:password])  if params[:user][:password] == params[:user][:password_confirmation] && !params[:user][:password].blank? 
       flash[:notice] = "Password has been changed. Please remember to use this password from now on. Your profile has been updated." unless params[:user][:crypted_password].nil?
-      @user.update_attributes(params[:user])
+      current_user.update_attributes(params[:user])
       flash[:notice] ||= "Your profile has been updated."
-	end
+    end
   end
 
   def user
+    puts params.inspect
     @user = User.find_by_login(params[:login])
-    @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
+    if !@user.nil?
+      @posts_percentage = Post.count > 0 ? @user.posts.size.to_f / Post.count.to_f * 100 : 0
+    else
+      flash[:notice] = "The user you are looking for does not exist!"
+      redirect_back_or_default(forums_path)
+    end
   end
   
   def ip_is_banned
     unless ip_banned?
+      puts "I am not banned!"
+      flash[:notice] = "Your IP is not banned!"
       redirect_to forums_path
     end
   end
